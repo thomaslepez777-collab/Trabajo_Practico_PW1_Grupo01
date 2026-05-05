@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArJet - Vuelos Disponibles</title>
-    <link rel="stylesheet" href="styles-pages.css">
+    <title>ArJet - Vuelos</title>
+    <link rel="stylesheet" href="styles-vuelos.css">
 </head>
 <body>
     <header>
@@ -16,60 +16,57 @@
             <a href="Contacto.html">Contacto</a>
         </nav>
     </header>
-
     <main>
-        <h1>Resultados de búsqueda</h1>
-        <section class="filtros-vuelo">
-            <h3>Filtros</h3>
-            <details>
-                <summary>Precio</summary>
-                <input type="range" min="100" max="5000">
+        <aside class="sidebar-filtros">
+            <h2>Filtros</h2>
+            <details open>
+                <summary>Precio máximo</summary>
+                <input type="range" min="450" max="1200" step="50" value="1200">
+                <p>Hasta $1200 USD</p>
             </details>
-            <details>
+            <details open>
                 <summary>Tipo de vuelo</summary>
-                <input type="checkbox" id="directo"> <label for="directo">Directo</label>
-                <input type="checkbox" id="escalas"> <label for="escalas">Con escalas</label>
+                <div style="display:flex; gap:1rem; margin:1rem 0;"><input type="checkbox" id="d" checked><label for="d">Directo</label></div>
+                <div style="display:flex; gap:1rem;"><input type="checkbox" id="e"><label for="e">Con escalas</label></div>
             </details>
-        </section>
-
-        <section class="lista-vuelos">
-            <article>
-                <p>Buenos Aires - Madrid</p>
-                <p>Precio: $1200</p>
-                <a href="DetalleVuelo.html">Ver detalle</a>
-            </article>
+        </aside>
+        <section class="resultados-vuelos">
+            <h1>Vuelos disponibles</h1>
+            <div class="lista-vuelos-scroll">
+                <article class="tarjeta-vuelo">
+                    <div class="info-ruta"><h3>Vuelo AR-2540</h3><p>Buenos Aires (EZE) ➔ Madrid (MAD)</p><span>12h 00m | Directo</span></div>
+                    <div style="text-align:right;"><p class="monto">$1200 USD</p><a href="DetalleVuelo.html" class="btn-seleccionar">Seleccionar</a></div>
+                </article>
+                <article class="tarjeta-vuelo">
+                    <div class="info-ruta"><h3>Vuelo AR-1080</h3><p>Buenos Aires (EZE) ➔ Roma (FCO)</p><span>15h 30m | 1 Escala</span></div>
+                    <div style="text-align:right;"><p class="monto">$950 USD</p><a href="DetalleVuelo.html" class="btn-seleccionar">Seleccionar</a></div>
+                </article>
+                <article class="tarjeta-vuelo">
+                    <div class="info-ruta"><h3>Vuelo AR-8821</h3><p>Buenos Aires (EZE) ➔ Río (GIG)</p><span>3h 15m | Directo</span></div>
+                    <div style="text-align:right;"><p class="monto">$450 USD</p><a href="DetalleVuelo.html" class="btn-seleccionar">Seleccionar</a></div>
+                </article>
+            </div>
         </section>
     </main>
-
     <footer>
         <div class="footer-container">
             <div class="footer-col">
-                <img src="../Images/LOGO-a.jpeg" alt="Logo de ArJet">
+                <img src="../Images/LOGO-a.jpeg" alt="Logo" class="footer-logo">
                 <h2>ArJet</h2>
-                <nav>
-                    <a href="pages/SobreNosotros.html">Sobre Nosotros</a>
-                    <a href="pages/PoliticaDePrivacidad.html">Política de privacidad</a>
-                    <a href="pages/PreguntasFrecuentes.html">Preguntas frecuentes</a>
-                </nav>
+                <nav><a href="SobreNosotros.html">Sobre Nosotros</a><a href="PoliticaDePrivacidad.html">Privacidad</a><a href="PreguntasFrecuentes.html">FAQ</a></nav>
             </div>
             <div class="footer-col">
                 <h2>Enlaces</h2>
-                <nav>
-                    <a href="index.html">Inicio</a>
-                    <a href="pages/Vuelos.html">Vuelos</a>
-                    <a href="pages/Ofertas.html">Ofertas</a>
-                </nav>
+                <nav><a href="../index.html">Inicio</a><a href="Vuelos.html">Vuelos</a><a href="Ofertas.html">Ofertas</a></nav>
             </div>
             <div class="footer-col">
                 <h2>Síguenos</h2>
-                <nav>
-                    <a href="redes-sociales/instagram.html">Instagram</a>
-                    <a href="redes-sociales/facebook.html">Facebook</a>
-                    <a href="redes-sociales/red-soc-x.html">X</a>
-                    <a href="redes-sociales/tiktok.html">Tik-Tok</a>
-                </nav>
+                <nav><a href="#">Instagram</a><a href="#">Facebook</a><a href="#">X</a><a href="#">TikTok</a></nav>
             </div>
         </div>
     </footer>
 </body>
 </html>
+
+
+

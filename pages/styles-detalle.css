@@ -1,0 +1,120 @@
+html { font-size: 62.5%; }
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+
+body {
+    background-color: #f8f9fa;
+    font-size: 1.6rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+header {
+    background-color: #fff;
+    padding: 1.5rem 5%;
+    border-bottom: 0.3rem solid #005c84;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+header img { height: 5rem; }
+nav a { text-decoration: none; color: #005c84; margin-left: 2rem; font-weight: bold; }
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+h1 { color: #005c84; margin-bottom: 2rem; font-size: 3rem; }
+
+.avion-layout {
+    background: #e9ecef;
+    padding: 4rem 3rem;
+    border-radius: 8rem 8rem 2rem 2rem;
+    box-shadow: 0 1rem 2.5rem rgba(0,0,0,0.1);
+    display: inline-block;
+}
+
+.fila-asientos {
+    display: flex;
+    gap: 1.2rem;
+    margin-bottom: 1.2rem;
+    align-items: center;
+}
+
+.bloque-asientos {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.pasillo { width: 4rem; }
+
+.input-asiento { display: none; }
+
+.asiento {
+    width: 4.5rem;
+    height: 4.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.8rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: white;
+}
+
+.disponible { background: #28a745; cursor: pointer; transition: 0.2s; }
+.ocupado { background: #dc3545; cursor: not-allowed; }
+
+.input-asiento:checked + .disponible {
+    background: #005c84;
+    border: 0.3rem solid #00a8e8;
+}
+
+.btn-continuar {
+    margin-top: 3rem;
+    background: #005c84;
+    color: white;
+    padding: 1.5rem 4rem;
+    text-decoration: none;
+    border-radius: 1rem;
+    font-weight: bold;
+    font-size: 1.8rem;
+    transition: 0.3s;
+}
+
+.btn-continuar:hover { background: #00a8e8; }
+
+footer {
+    background-color: #1a3a4a;
+    color: white;
+    padding: 4rem 5%;
+    flex-shrink: 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10rem;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    height: 7rem;
+    width: 7rem;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-col h2 { font-size: 1.6rem; margin-bottom: 1.5rem; color: #00a8e8; text-transform: uppercase; }
+.footer-col nav a { display: block; color: #ccc; text-decoration: none; margin: 0.5rem 0; font-size: 1.4rem; }

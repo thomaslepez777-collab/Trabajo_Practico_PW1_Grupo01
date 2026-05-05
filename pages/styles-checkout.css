@@ -1,0 +1,140 @@
+html { font-size: 62.5%; }
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+
+body {
+    background-color: #f8f9fa;
+    font-size: 1.6rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+header {
+    background-color: #fff;
+    padding: 1.5rem 5%;
+    border-bottom: 0.3rem solid #005c84;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+header img { height: 5rem; }
+nav a { text-decoration: none; color: #005c84; margin-left: 2rem; font-weight: bold; }
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+h1 { color: #005c84; margin-bottom: 2rem; font-size: 3rem; }
+
+form {
+    background: white;
+    padding: 3rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 50rem;
+}
+
+.metodos-pago {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.opcion-pago {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: bold;
+    color: #1a3a4a;
+    cursor: pointer;
+}
+
+
+.info-pago {
+    display: none;
+    background: #f0f4f7;
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    border-left: 0.4rem solid #005c84;
+}
+
+#radio-tarjeta:checked ~ #form-tarjeta,
+#radio-transferencia:checked ~ #info-transferencia,
+#radio-efectivo:checked ~ #info-efectivo,
+#radio-billetera:checked ~ #info-billetera {
+    display: block;
+}
+
+
+.grid-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+input {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    border: 0.1rem solid #ccc;
+    border-radius: 0.5rem;
+}
+
+.full-width { grid-column: span 2; }
+
+.btn-confirmar {
+    display: block;
+    width: 100%;
+    background: #005c84;
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 0.8rem;
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-confirmar:hover { background: #00a8e8; }
+
+footer {
+    background-color: #1a3a4a;
+    color: white;
+    padding: 4rem 5%;
+    flex-shrink: 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10rem;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    height: 7rem;
+    width: 7rem;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-col h2 { font-size: 1.6rem; color: #00a8e8; margin-bottom: 1.5rem; text-transform: uppercase; }
+.footer-col nav a { display: block; color: #ccc; text-decoration: none; margin: 0.5rem 0; font-size: 1.4rem; }

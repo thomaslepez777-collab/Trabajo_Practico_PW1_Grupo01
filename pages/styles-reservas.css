@@ -1,0 +1,124 @@
+html { font-size: 62.5%; }
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+
+body {
+    background-color: #f8f9fa;
+    font-size: 1.6rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+header {
+    background-color: #fff;
+    padding: 1.5rem 5%;
+    border-bottom: 0.3rem solid #005c84;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+header img { height: 5rem; }
+nav a { text-decoration: none; color: #005c84; margin-left: 2rem; font-weight: bold; }
+
+main {
+    flex: 1;
+    max-width: 80rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    overflow-y: auto;
+}
+
+h1 { color: #005c84; margin-bottom: 1rem; font-size: 3rem; text-align: center; }
+.subtitulo { text-align: center; color: #666; margin-bottom: 4rem; font-size: 1.6rem; }
+
+
+details {
+    background: white;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.4rem 1rem rgba(0,0,0,0.05);
+    overflow: hidden;
+    border-left: 0.5rem solid #005c84;
+    transition: 0.3s;
+}
+
+details[open] {
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.1);
+}
+
+summary {
+    padding: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #1a3a4a;
+    list-style: none; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.8rem;
+}
+
+summary::after {
+    content: '▼';
+    font-size: 1.2rem;
+    color: #005c84;
+    transition: 0.3s;
+}
+
+details[open] summary::after {
+    transform: rotate(180deg);
+}
+
+.contenido-reserva {
+    padding: 2rem;
+    background: #f0f4f7;
+    border-top: 0.1rem solid #eee;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.contenido-reserva p {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.contenido-reserva strong {
+    color: #005c84;
+}
+
+.estado-confirmado {
+    color: #28a745;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #1a3a4a;
+    color: white;
+    padding: 4rem 5%;
+    flex-shrink: 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10rem;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    height: 7rem;
+    width: 7rem;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-col h2 { font-size: 1.6rem; color: #00a8e8; margin-bottom: 1.5rem; text-transform: uppercase; }
+.footer-col nav a { display: block; color: #ccc; text-decoration: none; margin: 0.5rem 0; font-size: 1.4rem; }

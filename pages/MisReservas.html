@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ArJet - Mis Reservas</title>
-    <link rel="stylesheet" href="styles-pages.css">
+    <link rel="stylesheet" href="styles-reservas.css">
 </head>
 <body>
     <header>
@@ -19,25 +19,35 @@
 
     <main>
         <h1>Mis Reservas</h1>
-        <p>Hacé clic en cada vuelo para ver el detalle:</p>
+        <p class="subtitulo">Gestioná tus vuelos y revisá los detalles de tus próximos viajes.</p>
 
+        
         <details>
-            <summary>Vuelo: Buenos Aires - Madrid | 15/12/2024</summary>
+            <summary>
+                <span>EZE ➔ MAD | 15 Dic 2024</span>
+            </summary>
             <div class="contenido-reserva">
-                <p><strong>Pasajero:</strong> Tu Nombre</p>
+                <p><strong>Pasajero:</strong> Juan Pérez</p>
+                <p><strong>Vuelo:</strong> AR-2540</p>
                 <p><strong>Asiento:</strong> 12C (Pasillo)</p>
                 <p><strong>Precio:</strong> $1.200 USD</p>
-                <p><strong>Estado:</strong> Confirmado</p>
+                <p><strong>Estado:</strong> <span class="estado-confirmado">Confirmado</span></p>
+                <p><strong>Check-in:</strong> Disponible en 10 días</p>
             </div>
         </details>
 
+        
         <details>
-            <summary>Vuelo: Roma - Buenos Aires | 05/01/2025</summary>
+            <summary>
+                <span>EZE ➔ GIG | 05 Ene 2025</span>
+            </summary>
             <div class="contenido-reserva">
-                <p><strong>Pasajero:</strong> Tu Nombre</p>
+                <p><strong>Pasajero:</strong> Juan Pérez</p>
+                <p><strong>Vuelo:</strong> AR-8821</p>
                 <p><strong>Asiento:</strong> 04A (Ventana)</p>
-                <p><strong>Precio:</strong> $980 USD</p>
-                <p><strong>Estado:</strong> Pendiente de pago</p>
+                <p><strong>Precio:</strong> $450 USD</p>
+                <p><strong>Estado:</strong> <span class="estado-confirmado">Pagado</span></p>
+                <p><strong>Equipaje:</strong> 1 Bodega (23kg)</p>
             </div>
         </details>
     </main>
@@ -45,7 +55,7 @@
     <footer>
         <div class="footer-container">
             <div class="footer-col">
-                <img src="../Images/LOGO-a.jpeg" alt="Logo de ArJet">
+                <img src="../Images/LOGO-a.jpeg" alt="Logo de ArJet" class="footer-logo">
                 <h2>ArJet</h2>
                 <nav>
                     <a href="SobreNosotros.html">Sobre Nosotros</a>
@@ -53,7 +63,25 @@
                     <a href="PreguntasFrecuentes.html">Preguntas frecuentes</a>
                 </nav>
             </div>
+            <div class="footer-col">
+                <h2>Enlaces</h2>
+                <nav>
+                    <a href="../index.html">Inicio</a>
+                    <a href="Vuelos.html">Vuelos</a>
+                    <a href="Ofertas.html">Ofertas</a>
+                </nav>
+            </div>
+            <div class="footer-col">
+                <h2>Síguenos</h2>
+                <nav>
+                    <a href="../redes-sociales/instagram.html">Instagram</a>
+                    <a href="../redes-sociales/facebook.html">Facebook</a>
+                    <a href="../redes-sociales/red-soc-x.html">X</a>
+                    <a href="../redes-sociales/tiktok.html">Tik-Tok</a>
+                </nav>
+            </div>
         </div>
     </footer>
 </body>
 </html>
+

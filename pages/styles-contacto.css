@@ -1,0 +1,131 @@
+html { font-size: 62.5%; }
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+
+body {
+    background-color: #f8f9fa;
+    font-size: 1.6rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+header {
+    background-color: #fff;
+    padding: 1.5rem 5%;
+    border-bottom: 0.3rem solid #005c84;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+header img { height: 5rem; }
+nav a { text-decoration: none; color: #005c84; margin-left: 2rem; font-weight: bold; }
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+h1 { color: #005c84; margin-bottom: 2rem; font-size: 3rem; }
+
+form {
+    background: white;
+    padding: 3rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 50rem;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 1.5rem;
+    font-weight: bold;
+    color: #1a3a4a;
+    font-size: 1.4rem;
+}
+
+input, select, textarea {
+    padding: 1.2rem;
+    margin-top: 0.5rem;
+    border: 0.1rem solid #ddd;
+    border-radius: 0.8rem;
+    font-size: 1.4rem;
+    background-color: #fcfcfc;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #005c84;
+    background-color: #fff;
+}
+
+.botones-form {
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+button {
+    flex: 1;
+    padding: 1.5rem;
+    border: none;
+    border-radius: 0.8rem;
+    font-weight: bold;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button[type="submit"] {
+    background-color: #005c84;
+    color: white;
+}
+
+button[type="submit"]:hover {
+    background-color: #00a8e8;
+}
+
+button[type="reset"] {
+    background-color: #eee;
+    color: #666;
+}
+
+button[type="reset"]:hover {
+    background-color: #ddd;
+}
+
+footer {
+    background-color: #1a3a4a;
+    color: white;
+    padding: 4rem 5%;
+    flex-shrink: 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10rem;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    height: 7rem;
+    width: 7rem;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-col h2 { font-size: 1.6rem; color: #00a8e8; margin-bottom: 1.5rem; text-transform: uppercase; }
+.footer-col nav a { display: block; color: #ccc; text-decoration: none; margin: 0.5rem 0; font-size: 1.4rem; }

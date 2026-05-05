@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ArJet - Contacto</title>
-    <link rel="stylesheet" href="styles-pages.css">
+    <link rel="stylesheet" href="styles-contacto.css">
 </head>
 <body>
     <header>
@@ -21,63 +21,65 @@
         <h1>Contacto</h1>
         <form action="#" method="POST">
             <label for="nombre">Nombre Completo</label>
-            <input type="text" id="nombre" name="nombre" required>
+            <input type="text" id="nombre" name="nombre" required placeholder="Ej: Juan Pérez">
 
-            <label for="numero">Teléfono</label>
-            <input type="tel" id="numero" name="numero" required>
+            <label for="numero">Número de teléfono</label>
+            <input type="tel" id="numero" name="numero" required placeholder="Ej: +54 9 11 ...">
 
             <label for="email">Correo electrónico</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" required placeholder="usuario@email.com">
 
             <label for="motivo">Motivo de consulta</label>
             <select name="motivo" id="motivo" required>
                 <option value="" disabled selected>Elige una opción</option>
-                <option value="Reembolso">Reembolso o cambio</option>
-                <option value="Error_pasaje">Problemas con pasaje</option>
-                <option value="Error_web">Problemas con el sitio web</option>
-                <option value="Otro">Otro</option>
+                <option value="Reembolso">Quiero reembolsar o cambiar mi pasaje</option>
+                <option value="Error_pasaje">Tengo problemas con mi pasaje</option>
+                <option value="Error_web">Tengo problemas con el sitio web</option>
+                <option value="Otro">Otro tipo de consulta</option>
             </select>
 
             <label for="mensaje">Mensaje</label>
-            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+            <textarea id="mensaje" name="mensaje" rows="4" required placeholder="Escribí tu consulta aquí..."></textarea>
 
-            <div class="botones">
+            <div class="botones-form">
                 <button type="submit">Enviar</button>
                 <button type="reset">Cancelar</button>
             </div>
         </form>
     </main>
 
-  <footer>
+    <footer>
         <div class="footer-container">
             <div class="footer-col">
-                <img src="../Images/LOGO-a.jpeg" alt="Logo de ArJet">
+                <img src="../Images/LOGO-a.jpeg" alt="Logo de ArJet" class="footer-logo">
                 <h2>ArJet</h2>
                 <nav>
-                    <a href="pages/SobreNosotros.html">Sobre Nosotros</a>
-                    <a href="pages/PoliticaDePrivacidad.html">Política de privacidad</a>
-                    <a href="pages/PreguntasFrecuentes.html">Preguntas frecuentes</a>
+                    <a href="SobreNosotros.html">Sobre Nosotros</a>
+                    <a href="PoliticaDePrivacidad.html">Política de privacidad</a>
+                    <a href="PreguntasFrecuentes.html">Preguntas frecuentes</a>
                 </nav>
             </div>
             <div class="footer-col">
                 <h2>Enlaces</h2>
                 <nav>
-                    <a href="index.html">Inicio</a>
-                    <a href="pages/Vuelos.html">Vuelos</a>
-                    <a href="pages/Ofertas.html">Ofertas</a>
+                    <a href="../index.html">Inicio</a>
+                    <a href="Vuelos.html">Vuelos</a>
+                    <a href="Ofertas.html">Ofertas</a>
                 </nav>
             </div>
             <div class="footer-col">
                 <h2>Síguenos</h2>
                 <nav>
-                    <a href="redes-sociales/instagram.html">Instagram</a>
-                    <a href="redes-sociales/facebook.html">Facebook</a>
-                    <a href="redes-sociales/red-soc-x.html">X</a>
-                    <a href="redes-sociales/tiktok.html">Tik-Tok</a>
+                    <a href="../redes-sociales/instagram.html">Instagram</a>
+                    <a href="../redes-sociales/facebook.html">Facebook</a>
+                    <a href="../redes-sociales/red-soc-x.html">X</a>
+                    <a href="../redes-sociales/tiktok.html">Tik-Tok</a>
                 </nav>
             </div>
         </div>
     </footer>
 </body>
 </html>
+
+
 
