@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f4f7;
+    color: #1a3a4a;
+}
+
+header {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header img {
+    height: 60px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #005c84;
+    margin-left: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00a8e8;
+}
+
+.buscador-principal {
+    text-align: center;
+    padding: 100px 5%;
+    background: linear-gradient(rgba(0,92,132,0.8), rgba(0,92,132,0.8)), url('Images/fondo-vuelos.jpg');
+    background-size: cover;
+    color: white;
+}
+
+.buscador-principal h1 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+
+form {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    display: inline-block;
+    color: #333;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.inputs-busqueda {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+input, select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #005c84;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+footer {
+    background-color: #1a3a4a;
+    color: white;
+    padding: 40px 5%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.footer-col h2 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #00a8e8;
+}
+
+.footer-col nav a {
+    display: block;
+    color: #ccc;
+    margin: 5px 0;
+    font-weight: normal;
+}
