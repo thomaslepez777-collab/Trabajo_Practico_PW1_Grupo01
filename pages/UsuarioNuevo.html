@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles-pages.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="../Images/arjet_logo_transparente.png" alt="Logotipo de ArJet">
+        <nav>
+            <a href="../index.html">Inicio</a>
+            <a href="Usuario.html">Iniciar sesion</a>
+            <a href="Vuelos.html">Vuelos</a>
+            <a href="Ofertas.html">Ofertas</a>
+            <a href="pages/MisReservas.html">Mis Reservas</a>
+            <a href="Contacto.html">Contacto</a>
+        </nav>
+    </header>
+    <main>
+        <h1>registrarse</h1>
+        <form action="#" method="POST">
+            <label for="nombre">Nombre Completo</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="nacionalidad">Nacionalidad</label>
+            <input type="text" pattern="[A-Za-zñÑ]" id="nacionalidad" name="nacionalidad" required>
+
+            <label for="dni">Numero de Documento</label>
+            <input type="text" inputmode="numeric" pattern="[0-9]{8}" id="dni" name="dni" required>
+
+            <label for="numero">Número de teléfono</label>
+            <input type="tel" id="numero" name="numero" required>
+
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" required>
+
+             <div class="botones-usuario">
+                <button type="submit">Enviar</button>
+                <button type="reset">Cancelar</button>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <img src="../Images/LOGO-a.jpeg" alt="Logo" class="footer-logo">
+                <h2>ArJet</h2>
+                <nav><a href="SobreNosotros.html">Sobre Nosotros</a><a href="PoliticaDePrivacidad.html">Privacidad</a><a
+                        href="PreguntasFrecuentes.html">Preguntas frecuentes</a></nav>
+            </div>
+            <div class="footer-col">
+                <h2>Enlaces</h2>
+                <nav><a href="../index.html">Inicio</a><a href="Vuelos.html">Vuelos</a><a
+                        href="Ofertas.html">Ofertas</a></nav>
+            </div>
+            <div class="footer-col">
+                <h2>Síguenos</h2>
+                <nav><a href="#">Instagram</a><a href="#">Facebook</a><a href="#">X</a><a href="#">TikTok</a></nav>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
