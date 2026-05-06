@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Usuario</title>
-    <link rel="stylesheet" href="styles-pages.css">
+    <title>ArJet - Iniciar Sesión</title>
+    <link rel="stylesheet" href="styles-usuario.css">
 </head>
-
 <body>
     <header>
         <img src="../Images/arjet_logo_transparente.png" alt="Logotipo de ArJet">
@@ -22,26 +20,23 @@
     </header>
 
     <main>
-        <h1>Iniciar Sesion</h1>
+        <h1>Iniciar Sesión</h1>
+        <form action="#" method="post">
+            <label for="nombreUsuario">Nombre de Usuario</label>
+            <input type="text" id="nombreUsuario" name="nombreUsuario" required placeholder="Tu usuario">
 
-        <section class="UsuarioLogin">
-            <form action="#" method="post">
-                <label for="nombreUsuario">Nombre de Usuario</label>
-                <input type="text" id="nombreUsuario" name="nombreUsuario" required>
+            <label for="contraseña">Contraseña</label>
+            <input type="password" id="contraseña" name="contraseña" required placeholder="••••••••">
 
-                <label for="contraseña">Contraseña</label>
-                <input type="password" id="contraseña" name="contraseña" required>
-
-                <div class="botones-usuario">
-                <button type="submit">Enviar</button>
+            <div class="botones-usuario">
+                <button type="submit">Ingresar</button>
                 <button type="reset">Cancelar</button>
             </div>
-            </form>
-        </section>
-      <p>¿No estas registrado? ve a: <a href="UsuarioNuevo.html">Crear usuario</a></p>
+        </form>
+        <p>¿No estás registrado? <a href="UsuarioNuevo.html">Crear cuenta nueva</a></p>
     </main>
 
-     <footer>
+    <footer>
         <div class="footer-container">
             <div class="footer-col">
                 <img src="../Images/LOGO-a.jpeg" alt="Logo de ArJet" class="footer-logo">
@@ -72,5 +67,4 @@
         </div>
     </footer>
 </body>
-
 </html>
