@@ -1,22 +1,166 @@
-html { font-size: 62.5%; }
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
-body { background-color: #f8f9fa; font-size: 1.6rem; height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
-header { background-color: #fff; padding: 1.5rem 5%; border-bottom: 0.3rem solid #005c84; display: flex; justify-content: space-between; align-items: center; flex-shrink: 0; }
-header img { height: 5rem; }
-nav a { text-decoration: none; color: #005c84; margin-left: 2rem; font-weight: bold; }
-main { flex: 1; max-width: 120rem; width: 100%; margin: 0 auto; padding: 2rem 5%; display: flex; gap: 4rem; overflow: hidden; }
-.sidebar-filtros { flex: 0 0 25rem; background: white; padding: 2rem; border-radius: 1rem; box-shadow: 0 0.4rem 1rem rgba(0,0,0,0.05); height: fit-content; }
-.sidebar-filtros h2 { color: #005c84; margin-bottom: 2rem; font-size: 2rem; }
-.resultados-vuelos { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
-.lista-vuelos-scroll { overflow-y: auto; padding-right: 1rem; }
-.tarjeta-vuelo { background: white; padding: 2.5rem; border-radius: 1rem; margin-bottom: 2rem; box-shadow: 0 0.4rem 1.5rem rgba(0,0,0,0.05); border-left: 0.5rem solid #005c84; display: flex; justify-content: space-between; align-items: center; }
-.info-ruta h3 { color: #005c84; font-size: 1.8rem; }
-.monto { font-size: 2.2rem; font-weight: bold; color: #1a3a4a; margin-bottom: 0.5rem; }
-.btn-seleccionar { background: #005c84; color: white; text-decoration: none; padding: 1rem 2rem; border-radius: 0.5rem; font-weight: bold; display: inline-block; }
-footer { background-color: #1a3a4a; color: white; padding: 3rem 5%; flex-shrink: 0; }
-.footer-container { display: flex; justify-content: flex-start; gap: 10rem; }
-.footer-logo { height: 5rem; width: 5rem; background: white; padding: 0.5rem; border-radius: 0.5rem; margin-bottom: 1rem; }
-.footer-col h2 { font-size: 1.4rem; color: #00a8e8; margin-bottom: 1rem; text-transform: uppercase; }
-.footer-col nav a { display: block; color: #ccc; text-decoration: none; font-size: 1.2rem; margin-bottom: 0.5rem; }
-details { background: #f8f9fa; padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 1.5rem; }
-summary { font-weight: bold; cursor: pointer; color: #005c84; }
+html {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    font-size: 1.6rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+header {
+    background-color: #fff;
+    padding: 1.5rem 5%;
+    border-bottom: 0.3rem solid #005c84;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+header img {
+    height: 5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #005c84;
+    margin-left: 2rem;
+    font-weight: bold;
+}
+
+main {
+    flex: 1;
+    max-width: 120rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 5%;
+    display: flex;
+    gap: 4rem;
+    overflow: hidden;
+}
+
+.sidebar-filtros {
+    flex: 0 0 25rem;
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.05);
+    height: fit-content;
+}
+
+.sidebar-filtros h2 {
+    color: #005c84;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.resultados-vuelos {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.lista-vuelos-scroll {
+    overflow-y: auto;
+    padding-right: 1rem;
+}
+
+.tarjeta-vuelo {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 0.4rem 1.5rem rgba(0, 0, 0, 0.05);
+    border-left: 0.5rem solid #005c84;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info-ruta h3 {
+    color: #005c84;
+    font-size: 1.8rem;
+}
+
+.monto {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #1a3a4a;
+    margin-bottom: 0.5rem;
+}
+
+.btn-seleccionar {
+    background: #005c84;
+    color: white;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    display: inline-block;
+}
+
+footer {
+    background-color: #1a3a4a;
+    color: white;
+    padding: 2rem 5%;
+    flex-shrink: 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content:flex-start;
+    gap: 5rem;
+    max-width: 120rem;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+.footer-logo {
+    height: 5rem;
+    width: 5rem;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.footer-col h2 {
+    font-size: 1.3rem;
+    color: #00a8e8;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.footer-col nav a {
+    display: block;
+    color: #ccc;
+    text-decoration: none;
+    margin: 0.3rem 0;
+    font-size: 1.4rem;
+}
+
+
+details {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+summary {
+    font-weight: bold;
+    cursor: pointer;
+    color: #005c84;
+}

@@ -1,16 +1,27 @@
-html { font-size: 62.5%; }
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+html {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
 body {
     background-color: #f8f9fa;
     font-size: 1.6rem;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    overflow: visible;
 }
 
 header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     background-color: #fff;
     padding: 1.5rem 5%;
     border-bottom: 0.3rem solid #005c84;
@@ -20,34 +31,53 @@ header {
     flex-shrink: 0;
 }
 
-header img { height: 5rem; }
-nav a { text-decoration: none; color: #005c84; margin-left: 2rem; font-weight: bold; }
+header img {
+    height: 5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #005c84;
+    margin-left: 2rem;
+    font-weight: bold;
+}
 
 main {
     flex: 1;
     max-width: 80rem;
     width: 100%;
     margin: 0 auto;
-    padding: 4rem 2rem;
-    overflow-y: auto;
+    padding: 6rem;
+    overflow-y: visible;
 }
 
-h1 { color: #005c84; margin-bottom: 1rem; font-size: 3rem; text-align: center; }
-.subtitulo { text-align: center; color: #666; margin-bottom: 4rem; font-size: 1.6rem; }
+h1 {
+    color: #005c84;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.subtitulo {
+    text-align: center;
+    color: #666;
+    margin-bottom: 4rem;
+    font-size: 1.6rem;
+}
 
 
 details {
     background: white;
     margin-bottom: 2rem;
     border-radius: 1rem;
-    box-shadow: 0 0.4rem 1rem rgba(0,0,0,0.05);
+    box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.05);
     overflow: hidden;
     border-left: 0.5rem solid #005c84;
     transition: 0.3s;
 }
 
 details[open] {
-    box-shadow: 0 1rem 2rem rgba(0,0,0,0.1);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
 }
 
 summary {
@@ -55,7 +85,7 @@ summary {
     font-weight: bold;
     cursor: pointer;
     color: #1a3a4a;
-    list-style: none; 
+    list-style: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -99,26 +129,39 @@ details[open] summary::after {
 footer {
     background-color: #1a3a4a;
     color: white;
-    padding: 4rem 5%;
+    padding: 2rem 5%;
     flex-shrink: 0;
 }
 
 .footer-container {
     display: flex;
-    justify-content: flex-start;
-    gap: 10rem;
+    justify-content:flex-start;
+    gap: 5rem;
     max-width: 120rem;
     margin: 0 auto;
+    align-items: flex-start;
 }
 
 .footer-logo {
-    height: 7rem;
-    width: 7rem;
+    height: 5rem;
+    width: 5rem;
     background-color: white;
     padding: 1rem;
     border-radius: 0.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
-.footer-col h2 { font-size: 1.6rem; color: #00a8e8; margin-bottom: 1.5rem; text-transform: uppercase; }
-.footer-col nav a { display: block; color: #ccc; text-decoration: none; margin: 0.5rem 0; font-size: 1.4rem; }
+.footer-col h2 {
+    font-size: 1.3rem;
+    color: #00a8e8;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.footer-col nav a {
+    display: block;
+    color: #ccc;
+    text-decoration: none;
+    margin: 0.3rem 0;
+    font-size: 1.4rem;
+}
