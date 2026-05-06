@@ -1,5 +1,13 @@
-html { font-size: 62.5%; }
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+html {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
 body {
     background-color: #f8f9fa;
@@ -20,26 +28,38 @@ header {
     flex-shrink: 0;
 }
 
-header img { height: 5rem; }
-nav a { text-decoration: none; color: #005c84; margin-left: 2rem; font-weight: bold; }
+header img {
+    height: 5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #005c84;
+    margin-left: 2rem;
+    font-weight: bold;
+}
 
 main {
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 2rem;
+    justify-content: flex-start;
+    padding: 6rem;
     overflow-y: auto;
 }
 
-h1 { color: #005c84; margin-bottom: 2rem; font-size: 3rem; }
+h1 {
+    color: #005c84;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+}
 
 form {
     background: white;
     padding: 3rem;
     border-radius: 1.5rem;
-    box-shadow: 0 1rem 3rem rgba(0,0,0,0.1);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 50rem;
 }
@@ -70,10 +90,10 @@ form {
     border-left: 0.4rem solid #005c84;
 }
 
-#radio-tarjeta:checked ~ #form-tarjeta,
-#radio-transferencia:checked ~ #info-transferencia,
-#radio-efectivo:checked ~ #info-efectivo,
-#radio-billetera:checked ~ #info-billetera {
+#radio-tarjeta:checked~#form-tarjeta,
+#radio-transferencia:checked~#info-transferencia,
+#radio-efectivo:checked~#info-efectivo,
+#radio-billetera:checked~#info-billetera {
     display: block;
 }
 
@@ -92,7 +112,9 @@ input {
     border-radius: 0.5rem;
 }
 
-.full-width { grid-column: span 2; }
+.full-width {
+    grid-column: span 2;
+}
 
 .btn-confirmar {
     display: block;
@@ -110,7 +132,9 @@ input {
     cursor: pointer;
 }
 
-.btn-confirmar:hover { background: #00a8e8; }
+.btn-confirmar:hover {
+    background: #00a8e8;
+}
 
 footer {
     background-color: #1a3a4a;
@@ -136,5 +160,17 @@ footer {
     margin-bottom: 1.5rem;
 }
 
-.footer-col h2 { font-size: 1.6rem; color: #00a8e8; margin-bottom: 1.5rem; text-transform: uppercase; }
-.footer-col nav a { display: block; color: #ccc; text-decoration: none; margin: 0.5rem 0; font-size: 1.4rem; }
+.footer-col h2 {
+    font-size: 1.6rem;
+    color: #00a8e8;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.footer-col nav a {
+    display: block;
+    color: #ccc;
+    text-decoration: none;
+    margin: 0.5rem 0;
+    font-size: 1.4rem;
+}
