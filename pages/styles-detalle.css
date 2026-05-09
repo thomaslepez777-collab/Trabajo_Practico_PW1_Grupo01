@@ -111,3 +111,19 @@ h1 {
 .btn-continuar:hover {
     background: #00a8e8;
 }
+
+.btn-atras {
+    margin-top: 3rem;
+    background: #df0b0b;
+    color: white;
+    padding: 1.5rem 4rem;
+    text-decoration: none;
+    border-radius: 1rem;
+    font-weight: bold;
+    font-size: 1.8rem;
+    transition: 0.3s;
+}
+
+.btn-atras:hover {
+    background: #00a8e8;
+}

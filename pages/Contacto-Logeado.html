@@ -1,44 +1,54 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArJet - Crear Cuenta</title>
-    <link rel="stylesheet" href="styles-usuario.css">
+    <title>ArJet - Contacto</title>
+    <link rel="stylesheet" href="styles-contacto.css">
     <link rel="stylesheet" href="../header-footer.css">
 </head>
+
 <body>
     <header>
         <img src="../Images/arjet_logo_transparente.png" alt="Logotipo de ArJet">
         <nav>
-            <a href="../index.html">Inicio</a>
-            <a href="Usuario.html">Iniciar sesion</a>
-            <a href="Vuelos.html">Vuelos</a>
-            <a href="Ofertas.html">Ofertas</a>
-            <a href="Contacto.html">Contacto</a>
+            <a href="../logueado_index.html">Inicio</a>
+            <a href="perfil_deUsuario.html">Mi Perfil</a>
+            <a href="Vuelos_Logeado.html">Vuelos</a>
+            <a href="Ofertas-logeado.html">Ofertas</a>
+            <a href="MisReservas.html">Mis Reservas</a>
+            <a href="Contacto-Logeado.html">Contacto</a>
         </nav>
     </header>
 
     <main>
-        <h1>Registrarse</h1>
-        <form action="../logueado_index.html" method="POST">
+        <h1>Contacto</h1>
+        <form action="#" method="POST">
             <label for="nombre">Nombre Completo</label>
             <input type="text" id="nombre" name="nombre" required placeholder="Ej: Juan Pérez">
 
-            <label for="nacionalidad">Nacionalidad</label>
-            <input type="text" id="nacionalidad" name="nacionalidad" required placeholder="Ej: Argentina">
-
-            <label for="dni">Número de Documento</label>
-            <input type="text" inputmode="numeric" pattern="[0-9]*" id="dni" name="dni" required placeholder="Solo números">
-
             <label for="numero">Número de teléfono</label>
-            <input type="tel" id="numero" name="numero" required placeholder="Ej: +54...">
+            <input type="tel" id="numero" name="numero" required placeholder="Ej: +54 9 11 ...">
 
             <label for="email">Correo electrónico</label>
             <input type="email" id="email" name="email" required placeholder="usuario@email.com">
 
-            <div class="botones-usuario">
-                <button type="submit">Crear Cuenta</button>
+            <label for="motivo">Motivo de consulta</label>
+            <select name="motivo" id="motivo" required>
+                <option value="" disabled selected>Elige una opción</option>
+                <option value="Reembolso">Quiero reembolsar o cambiar mi pasaje</option>
+                <option value="Error_pasaje">Tengo problemas con mi pasaje</option>
+                <option value="Error_web">Tengo problemas con el sitio web</option>
+                <option value="Otro">Otro tipo de consulta</option>
+            </select>
+
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required
+                placeholder="Escribí tu consulta aquí..."></textarea>
+
+            <div class="botones-form">
+                <button type="submit">Enviar</button>
                 <button type="reset">Cancelar</button>
             </div>
         </form>
@@ -75,4 +85,5 @@
         </div>
     </footer>
 </body>
+
 </html>
