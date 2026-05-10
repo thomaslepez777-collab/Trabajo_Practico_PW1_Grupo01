@@ -12,10 +12,8 @@ html {
 body {
     background-color: #f8f9fa;
     font-size: 1.6rem;
-    height: 100vh;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
 }
 
 nav a {
@@ -30,7 +28,6 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     padding: 2rem;
 }
 
@@ -126,4 +123,10 @@ h1 {
 
 .btn-atras:hover {
     background: #00a8e8;
+}
+
+.contenedor-botones {
+    display: flex;
+    gap: 2rem;
+    margin-top: 3rem;
 }

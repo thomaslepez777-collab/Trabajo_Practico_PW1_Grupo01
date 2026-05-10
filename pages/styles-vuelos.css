@@ -12,10 +12,8 @@ html {
 body {
     background-color: #f8f9fa;
     font-size: 1.6rem;
-    height: 100vh;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
 }
 
 nav a {
@@ -33,7 +31,6 @@ main {
     padding: 2rem 5%;
     display: flex;
     gap: 4rem;
-    overflow: hidden;
 }
 
 .sidebar-filtros {
@@ -55,10 +52,11 @@ main {
     flex: 1;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    min-height: 0;
 }
 
 .lista-vuelos-scroll {
+    flex: 1;
     overflow-y: auto;
     padding-right: 1rem;
 }
