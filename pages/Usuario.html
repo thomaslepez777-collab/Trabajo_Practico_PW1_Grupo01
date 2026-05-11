@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,21 +8,22 @@
     <link rel="stylesheet" href="styles-usuario.css">
     <link rel="stylesheet" href="../header-footer.css">
 </head>
+
 <body>
     <header>
         <img src="../Images/arjet_logo_transparente.png" alt="Logotipo de ArJet">
         <nav>
             <a href="../index.html">Inicio</a>
-            <a href="Usuario.html">Iniciar sesion</a>
-            <a href="Vuelos.html">Vuelos</a>
-            <a href="Ofertas.html">Ofertas</a>
-            <a href="Contacto.html">Contacto</a>
+            <a href="pages/Vuelos.html">Vuelos</a>
+            <a href="pages/Ofertas.html">Ofertas</a>
+            <a href="pages/Contacto.html">Contacto</a>
         </nav>
     </header>
 
     <main>
+        <a href="../index.html" class="btn-volver">← Volver</a>
         <h1>Iniciar Sesión</h1>
-        <form action="../logueado_index.html" method="post">
+        <form action="../logueado_index.html" method="get">
             <label for="nombreUsuario">Nombre de Usuario</label>
             <input type="text" id="nombreUsuario" name="nombreUsuario" required placeholder="Tu usuario">
 
@@ -30,7 +32,7 @@
 
             <div class="botones-usuario">
                 <button type="submit">Ingresar</button>
-                <button type="reset">Cancelar</button>
+                <button type="reset">Borrar</button>
             </div>
         </form>
         <p>¿No estás registrado? <a href="UsuarioNuevo.html">Crear cuenta nueva</a></p>
@@ -67,4 +69,5 @@
         </div>
     </footer>
 </body>
+
 </html>

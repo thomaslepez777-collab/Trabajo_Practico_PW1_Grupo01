@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,21 +8,22 @@
     <link rel="stylesheet" href="styles-usuario.css">
     <link rel="stylesheet" href="../header-footer.css">
 </head>
+
 <body>
     <header>
         <img src="../Images/arjet_logo_transparente.png" alt="Logotipo de ArJet">
         <nav>
             <a href="../index.html">Inicio</a>
-            <a href="Usuario.html">Iniciar sesion</a>
-            <a href="Vuelos.html">Vuelos</a>
-            <a href="Ofertas.html">Ofertas</a>
-            <a href="Contacto.html">Contacto</a>
+            <a href="../pages/Vuelos.html">Vuelos</a>
+            <a href="../pages/Ofertas.html">Ofertas</a>
+            <a href="../pages/Contacto.html">Contacto</a>
         </nav>
     </header>
 
     <main>
+        <a href="Usuario.html" class="btn-volver">← Volver</a>
         <h1>Registrarse</h1>
-        <form action="../logueado_index.html" method="POST">
+        <form action="../logueado_index.html" method="get">
             <label for="nombre">Nombre Completo</label>
             <input type="text" id="nombre" name="nombre" required placeholder="Ej: Juan Pérez">
 
@@ -29,7 +31,8 @@
             <input type="text" id="nacionalidad" name="nacionalidad" required placeholder="Ej: Argentina">
 
             <label for="dni">Número de Documento</label>
-            <input type="text" inputmode="numeric" pattern="[0-9]*" id="dni" name="dni" required placeholder="Solo números">
+            <input type="text" inputmode="numeric" pattern="[0-9]*" id="dni" name="dni" required
+                placeholder="Solo números">
 
             <label for="numero">Número de teléfono</label>
             <input type="tel" id="numero" name="numero" required placeholder="Ej: +54...">
@@ -39,7 +42,7 @@
 
             <div class="botones-usuario">
                 <button type="submit">Crear Cuenta</button>
-                <button type="reset">Cancelar</button>
+                <button type="reset">Borrar</button>
             </div>
         </form>
     </main>
@@ -75,4 +78,5 @@
         </div>
     </footer>
 </body>
+
 </html>
