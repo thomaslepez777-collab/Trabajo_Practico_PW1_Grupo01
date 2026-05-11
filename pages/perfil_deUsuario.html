@@ -1,13 +1,109 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Perfil</title>
-    
+    <title>ArJet - Mi Perfil</title>
     <link rel="stylesheet" href="../header-footer.css">
+    <link rel="stylesheet" href="perfil_deUsuario.css">
 </head>
+
 <body>
-    
+    <div id="form-editar"></div>
+    <header>
+        <img src="../Images/arjet_logo_transparente.png" alt="Logotipo de ArJet">
+        <nav>
+            <a href="../logueado_index.html">Inicio</a>
+            <a href="Vuelos_Logeado.html">Vuelos</a>
+            <a href="Ofertas-logeado.html">Ofertas</a>
+            <a href="Contacto-Logeado.html">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <a href="../logueado_index.html" class="btn-volver">← Volver</a>
+        <h1>Mi Perfil</h1>
+        <div class="form-editar">
+            <h2>Modificar datos</h2>
+            <form action="#" method="get">
+                <label for="nombre">Nombre Completo</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Jorge Benítez">
+
+                <label for="nacionalidad">Nacionalidad</label>
+                <input type="text" id="nacionalidad" name="nacionalidad" placeholder="Argentina">
+
+                <label for="dni">Número de Documento</label>
+                <input type="text" id="dni" name="dni" placeholder="12345678">
+
+                <label for="telefono">Número de Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="+54 9 11 1234 5678">
+
+                <label for="email">Correo Electrónico</label>
+                <input type="email" id="email" name="email" placeholder="jorge.benitez@email.com">
+
+                <div class="botones-form">
+                    <button type="submit">Guardar cambios</button>
+                    <a href="#" class="btn-cancelar">Cancelar</a>
+                </div>
+            </form>
+        </div>
+
+        <div class="tarjeta-perfil">
+            <div class="campo-perfil">
+                <span>Nombre Completo</span>
+                <p>Jorge Benítez</p>
+            </div>
+            <div class="campo-perfil">
+                <span>Nacionalidad</span>
+                <p>Argentina</p>
+            </div>
+            <div class="campo-perfil">
+                <span>Número de Documento</span>
+                <p>12345678</p>
+            </div>
+            <div class="campo-perfil">
+                <span>Número de Teléfono</span>
+                <p>+54 9 11 1234 5678</p>
+            </div>
+            <div class="campo-perfil">
+                <span>Correo Electrónico</span>
+                <p>jorge.benitez@email.com</p>
+            </div>
+            <a href="#form-editar" class="btn-modificar">Modificar datos</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <img src="../Images/LOGO-a.jpeg" alt="Logo de ArJet" class="footer-logo">
+                <h2>ArJet</h2>
+                <nav>
+                    <a href="SobreNosotros.html">Sobre Nosotros</a>
+                    <a href="PoliticaDePrivacidad.html">Política de privacidad</a>
+                    <a href="PreguntasFrecuentes.html">Preguntas frecuentes</a>
+                </nav>
+            </div>
+            <div class="footer-col">
+                <h2>Enlaces</h2>
+                <nav>
+                    <a href="../logueado_index.html">Inicio</a>
+                    <a href="Vuelos_Logeado.html">Vuelos</a>
+                    <a href="Ofertas-logeado.html">Ofertas</a>
+                </nav>
+            </div>
+            <div class="footer-col">
+                <h2>Síguenos</h2>
+                <nav>
+                    <a href="../redes-sociales/instagram.html">Instagram</a>
+                    <a href="../redes-sociales/facebook.html">Facebook</a>
+                    <a href="../redes-sociales/red-soc-x.html">X</a>
+                    <a href="../redes-sociales/tiktok.html">Tik-Tok</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>
