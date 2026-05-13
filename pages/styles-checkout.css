@@ -15,7 +15,6 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    overflow: visible;
 }
 
 nav a {
@@ -26,14 +25,12 @@ nav a {
 }
 
 main {
-    padding: 5rem;
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding: 6rem;
-    overflow-y: visible;
+    padding: 6rem 2rem;
 }
 
 h1 {
@@ -44,97 +41,140 @@ h1 {
 
 form {
     background: white;
-    padding: 3rem;
+    padding: 4rem;
     border-radius: 1.5rem;
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 50rem;
+    max-width: 55rem;
+}
+
+form h3 {
+    color: #1a3a4a;
+    margin-bottom: 2.5rem;
+    font-size: 2rem;
+    border-bottom: 0.2rem solid #e9ecef;
+    padding-bottom: 1rem;
 }
 
 .metodos-pago {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    row-gap: 1.5rem;
+    column-gap: 1.2rem;
+    margin-bottom: 3rem;
+}
+
+.metodos-pago input[type="radio"] {
+    width: 2rem;
+    height: 2rem;
+    margin: 0;
+    cursor: pointer;
+    accent-color: #005c84; 
 }
 
 .opcion-pago {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
     font-weight: bold;
     color: #1a3a4a;
     cursor: pointer;
+    font-size: 1.6rem;
+    user-select: none;
 }
-
 
 .info-pago {
     display: none;
+    grid-column: 1 / -1;
     background: #f0f4f7;
-    padding: 2rem;
+    padding: 2.5rem;
     border-radius: 1rem;
-    margin-top: 1rem;
     border-left: 0.4rem solid #005c84;
+    margin-top: -0.5rem;
+    margin-bottom: 1rem;
 }
 
-#radio-tarjeta:checked~#form-tarjeta,
-#radio-transferencia:checked~#info-transferencia,
-#radio-efectivo:checked~#info-efectivo,
-#radio-billetera:checked~#info-billetera {
+#radio-tarjeta:checked ~ #form-tarjeta,
+#radio-transferencia:checked ~ #info-transferencia,
+#radio-efectivo:checked ~ #info-efectivo,
+#radio-billetera:checked ~ #info-billetera {
     display: block;
 }
-
 
 .grid-form {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    gap: 1.2rem;
 }
 
-input {
+.grid-form input {
     width: 100%;
-    padding: 1rem;
-    margin-top: 0.5rem;
+    padding: 1.2rem;
     border: 0.1rem solid #ccc;
-    border-radius: 0.5rem;
+    border-radius: 0.6rem;
+    font-size: 1.5rem;
+    transition: border-color 0.2s;
+}
+
+.grid-form input:focus {
+    border-color: #005c84;
+    outline: none;
 }
 
 .full-width {
     grid-column: span 2;
 }
 
-.btn-confirmar {
-    display: block;
-    width: 100%;
-    background: #005c84;
-    color: white;
-    padding: 1.5rem;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 0.8rem;
-    font-weight: bold;
-    font-size: 1.8rem;
-    margin-top: 2rem;
-    border: none;
-    cursor: pointer;
+.info-pago p {
+    margin-bottom: 0.8rem;
+    color: #495057;
+    font-size: 1.5rem;
+    line-height: 1.5;
 }
 
-.btn-confirmar:hover {
-    background: #00a8e8;
+.info-pago p:last-child {
+    margin-bottom: 0;
+}
+
+.contenedor-botones {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+    justify-content: center;
+    width: 100%;
+}
+
+.btn-atras, 
+.btn-continuar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 5.5rem;
+    padding: 0 4rem;
+    border-radius: 1rem;
+    font-weight: bold;
+    font-size: 1.6rem;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    box-sizing: border-box;
 }
 
 .btn-atras {
-    margin-top: 3rem;
     background: #df0b0b;
     color: white;
-    padding: 1.5rem 4rem;
-    text-decoration: none;
-    border-radius: 1rem;
-    font-weight: bold;
-    font-size: 1.8rem;
-    transition: 0.3s;
 }
 
 .btn-atras:hover {
+    background: #b50808;
+    transform: translateY(-0.2rem);
+}
+
+.btn-continuar {
+    background: #005c84;
+    color: white;
+}
+
+.btn-continuar:hover {
     background: #00a8e8;
+    transform: translateY(-0.2rem);
 }

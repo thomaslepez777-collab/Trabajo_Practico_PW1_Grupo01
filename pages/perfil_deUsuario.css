@@ -177,3 +177,41 @@ h1 {
 .btn-cancelar:hover {
   background: #ddd;
 }
+
+.password-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    border-bottom: 0.1rem solid #eee;
+    padding-bottom: 1rem;
+}
+
+.toggle-check {
+    display: none;
+}
+
+.pass-text {
+    font-size: 1.6rem;
+    color: #1a3a4a;
+    font-weight: bold;
+    -webkit-text-security: disc; 
+    transition: 0.2s;
+}
+
+.toggle-check:checked + .pass-text {
+    -webkit-text-security: none;
+    color: #005c84;
+}
+.btn-eye {
+    cursor: pointer;
+    font-size: 1.8rem;
+    user-select: none;
+}
+
+.toggle-check:checked ~ .btn-eye::after {
+    content: "👁";
+    position: absolute;
+    right: 0;
+    background: white;
+}

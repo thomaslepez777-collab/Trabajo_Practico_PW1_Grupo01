@@ -30,13 +30,13 @@ main {
     max-width: 80rem;
     width: 100%;
     margin: 0 auto;
-    padding: 6rem;
+    padding: 2rem;
     overflow-y: visible;
 }
 
 h1 {
     color: #005c84;
-    margin-bottom: 1rem;
+    margin-bottom: 0.2rem;
     font-size: 3rem;
     text-align: center;
 }
@@ -107,4 +107,14 @@ details[open] summary::after {
 .estado-confirmado {
     color: #28a745;
     font-weight: bold;
+}
+
+.btn-volver {
+    padding: 1.5rem;
+    align-self: flex-start;
+    color: #005c84;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
 }

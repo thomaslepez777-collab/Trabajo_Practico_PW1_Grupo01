@@ -23,280 +23,289 @@
 
     <main>
         <h1>Seleccioná tu asiento</h1>
+        <form action="equipaje.html" method="POST" class="formulario-asientos">
+    
+    <div class="leyenda">
+        <div class="leyenda-item"><span class="leyenda-color disponible"></span> Disponible</div>
+        <div class="leyenda-item"><span class="leyenda-color ocupado"></span> Ocupado</div>
+        <div class="leyenda-item"><span class="leyenda-color seleccionado"></span> Seleccionado</div>
+    </div>
 
-        <div class="avion-layout">
-            <div class="fila-asientos">
-                <div class="bloque-asientos">
-                    <div class="asiento ocupado">1A</div>
-                    <div class="asiento-wrapper">
-                        <input type="radio" name="asiento" id="s1B" class="input-asiento">
-                        <label for="s1B" class="asiento disponible">1B</label>
-                    </div>
-                    <div class="asiento-wrapper">
-                        <input type="radio" name="asiento" id="s1C" class="input-asiento">
-                        <label for="s1C" class="asiento disponible">1C</label>
-                    </div>
+    <div class="avion-layout">
+        
+        <div class="fila-asientos">
+            <div class="bloque-asientos">
+                <div class="asiento ocupado">1A</div>
+                <div class="asiento-wrapper">
+                    <input type="radio" name="asiento" id="s1B" value="1B" class="input-asiento" required>
+                    <label for="s1B" class="asiento disponible">1B</label>
                 </div>
-                <div class="pasillo"></div>
-                <div class="bloque-asientos">
-                    <div class="asiento-wrapper">
-                        <input type="radio" name="asiento" id="s1D" class="input-asiento">
-                        <label for="s1D" class="asiento disponible">1D</label>
-                    </div>
-                    <div class="asiento-wrapper">
-                        <input type="radio" name="asiento" id="s1E" class="input-asiento">
-                        <label for="s1E" class="asiento disponible">1E</label>
-                    </div>
-                    <div class="asiento ocupado">1F</div>
+                <div class="asiento-wrapper">
+                    <input type="radio" name="asiento" id="s1C" value="1C" class="input-asiento" required>
+                    <label for="s1C" class="asiento disponible">1C</label>
                 </div>
             </div>
-
-            <div class="fila-asientos">
-                <div class="bloque-asientos">
-                    <div class="asiento-wrapper">
-                        <input type="radio" name="asiento" id="s2A" class="input-asiento">
-                        <label for="s2A" class="asiento disponible">2A</label>
-                    </div>
-                    <div class="asiento ocupado">2B</div>
-                    <div class="asiento-wrapper">
-                        <input type="radio" name="asiento" id="s2C" class="input-asiento">
-                        <label for="s2C" class="asiento disponible">2C</label>
-                    </div>
+            <div class="pasillo"></div>
+            <div class="bloque-asientos">
+                <div class="asiento-wrapper">
+                    <input type="radio" name="asiento" id="s1D" value="1D" class="input-asiento" required>
+                    <label for="s1D" class="asiento disponible">1D</label>
                 </div>
-                <div class="pasillo"></div>
-                <div class="bloque-asientos">
-                    <div class="asiento-wrapper">
-                        <input type="radio" name="asiento" id="s2D" class="input-asiento">
-                        <label for="s2D" class="asiento disponible">2D</label>
-                    </div>
-                    <div class="asiento-wrapper">
-                        <input type="radio" name="asiento" id="s2E" class="input-asiento">
-                        <label for="s2E" class="asiento disponible">2E</label>
-                    </div>
-                    <div class="asiento-wrapper">
-                        <input type="radio" name="asiento" id="s2F" class="input-asiento">
-                        <label for="s2F" class="asiento disponible">2F</label>
-                    </div>
+                <div class="asiento-wrapper">
+                    <input type="radio" name="asiento" id="s1E" value="1E" class="input-asiento" required>
+                    <label for="s1E" class="asiento disponible">1E</label>
                 </div>
+                <div class="asiento ocupado">1F</div>
             </div>
-
-            <div class="fila-asientos">
-                <div class="bloque-asientos">
-                    <div class="asiento-wrapper">
-                        <input type="radio" name="asiento" id="s3A" class="input-asiento">
-                        <label for="s3A" class="asiento disponible">3A</label>
-                    </div>
-                    <div class="asiento-wrapper">
-                        <input type="radio" name="asiento" id="s3B" class="input-asiento">
-                        <label for="s3B" class="asiento disponible">3B</label>
-                    </div>
-                    <div class="asiento ocupado">3C</div>
-                </div>
-                <div class="pasillo"></div>
-                <div class="bloque-asientos">
-                    <div class="asiento ocupado">3D</div>
-                    <div class="asiento-wrapper">
-                        <input type="radio" name="asiento" id="s3E" class="input-asiento">
-                        <label for="s3E" class="asiento disponible">3E</label>
-                    </div>
-                    <div class="asiento-wrapper">
-                        <input type="radio" name="asiento" id="s3F" class="input-asiento">
-                        <label for="s3F" class="asiento disponible">3F</label>
-                    </div>
-                </div>
-            </div>
-
-            <div class="fila-asientos">
-                <div class="bloque-asientos">
-                    <div class="asiento ocupado">4A</div>
-                    <div class="asiento ocupado">4B</div>
-                    <div class="asiento-wrapper">
-                        <input type="radio" name="asiento" id="s4C" class="input-asiento">
-                        <label for="s4C" class="asiento disponible">4C</label>
-                    </div>
-                </div>
-                <div class="pasillo"></div>
-                <div class="bloque-asientos">
-                    <div class="asiento-wrapper">
-                        <input type="radio" name="asiento" id="s4D" class="input-asiento">
-                        <label for="s4D" class="asiento disponible">4D</label>
-                    </div>
-                    <div class="asiento-wrapper">
-                        <input type="radio" name="asiento" id="s4E" class="input-asiento">
-                        <label for="s4E" class="asiento disponible">4E</label>
-                    </div>
-                    <div class="asiento ocupado">4F</div>
-                </div>
-            </div>
-
-            <div class="fila-asientos">
-                <div class="bloque-asientos">
-                    <div class="asiento-wrapper">
-                        <input type="radio" name="asiento" id="s5A" class="input-asiento">
-                        <label for="s5A" class="asiento disponible">5A</label>
-                    </div>
-                    <div class="asiento-wrapper">
-                        <input type="radio" name="asiento" id="s5B" class="input-asiento">
-                        <label for="s5B" class="asiento disponible">5B</label>
-                    </div>
-                    <div class="asiento-wrapper">
-                        <input type="radio" name="asiento" id="s5C" class="input-asiento">
-                        <label for="s5C" class="asiento disponible">5C</label>
-                    </div>
-                </div>
-                <div class="pasillo"></div>
-                <div class="bloque-asientos">
-                    <div class="asiento-wrapper">
-                        <input type="radio" name="asiento" id="s5D" class="input-asiento">
-                        <label for="s5D" class="asiento disponible">5D</label>
-                    </div>
-                    <div class="asiento ocupado">5E</div>
-                    <div class="asiento-wrapper">
-                        <input type="radio" name="asiento" id="s5F" class="input-asiento">
-                        <label for="s5F" class="asiento disponible">5F</label>
-                    </div>
-                </div>
-            </div>
-
-            <div class="fila-asientos">
-                <div class="bloque-asientos">
-                    <div class="asiento-wrapper">
-                        <input type="radio" name="asiento" id="s6A" class="input-asiento">
-                        <label for="s6A" class="asiento disponible">6A</label>
-                    </div>
-                    <div class="asiento-wrapper">
-                        <input type="radio" name="asiento" id="s6B" class="input-asiento">
-                        <label for="s6B" class="asiento disponible">6B</label>
-                    </div>
-                    <div class="asiento-wrapper">
-                        <input type="radio" name="asiento" id="s6C" class="input-asiento">
-                        <label for="s6C" class="asiento disponible">6C</label>
-                    </div>
-                </div>
-                <div class="pasillo"></div>
-                <div class="bloque-asientos">
-                    <div class="asiento-wrapper">
-                        <input type="radio" name="asiento" id="s6D" class="input-asiento">
-                        <label for="s6D" class="asiento disponible">6D</label>
-                    </div>
-                    <div class="asiento-wrapper">
-                        <input type="radio" name="asiento" id="s6E" class="input-asiento">
-                        <label for="s6E" class="asiento disponible">6E</label>
-                    </div>
-                    <div class="asiento-wrapper">
-                        <input type="radio" name="asiento" id="s6F" class="input-asiento">
-                        <label for="s6F" class="asiento disponible">6F</label>
-                    </div>
-                </div>
-            </div>
-
-            <div class="fila-asientos">
-                <div class="bloque-asientos">
-                    <div class="asiento ocupado">7A</div>
-                    <div class="asiento-wrapper">
-                        <input type="radio" name="asiento" id="s7B" class="input-asiento">
-                        <label for="s7B" class="asiento disponible">7B</label>
-                    </div>
-                    <div class="asiento-wrapper">
-                        <input type="radio" name="asiento" id="s7C" class="input-asiento">
-                        <label for="s7C" class="asiento disponible">7C</label>
-                    </div>
-                </div>
-                <div class="pasillo"></div>
-                <div class="bloque-asientos">
-                    <div class="asiento ocupado">7D</div>
-                    <div class="asiento ocupado">7E</div>
-                    <div class="asiento ocupado">7F</div>
-                </div>
-            </div>
-
-            <div class="fila-asientos">
-                <div class="bloque-asientos">
-                    <div class="asiento-wrapper">
-                        <input type="radio" name="asiento" id="s8A" class="input-asiento">
-                        <label for="s8A" class="asiento disponible">8A</label>
-                    </div>
-                    <div class="asiento-wrapper">
-                        <input type="radio" name="asiento" id="s8B" class="input-asiento">
-                        <label for="s8B" class="asiento disponible">8B</label>
-                    </div>
-                    <div class="asiento-wrapper">
-                        <input type="radio" name="asiento" id="s8C" class="input-asiento">
-                        <label for="s8C" class="asiento disponible">8C</label>
-                    </div>
-                </div>
-                <div class="pasillo"></div>
-                <div class="bloque-asientos">
-                    <div class="asiento-wrapper">
-                        <input type="radio" name="asiento" id="s8D" class="input-asiento">
-                        <label for="s8D" class="asiento disponible">8D</label>
-                    </div>
-                    <div class="asiento-wrapper">
-                        <input type="radio" name="asiento" id="s8E" class="input-asiento">
-                        <label for="s8E" class="asiento disponible">8E</label>
-                    </div>
-                    <div class="asiento-wrapper">
-                        <input type="radio" name="asiento" id="s8F" class="input-asiento">
-                        <label for="s8F" class="asiento disponible">8F</label>
-                    </div>
-                </div>
-            </div>
-
-            <div class="fila-asientos">
-                <div class="bloque-asientos">
-                    <div class="asiento-wrapper">
-                        <input type="radio" name="asiento" id="s9A" class="input-asiento">
-                        <label for="s9A" class="asiento disponible">9A</label>
-                    </div>
-                    <div class="asiento ocupado">9B</div>
-                    <div class="asiento-wrapper">
-                        <input type="radio" name="asiento" id="s9C" class="input-asiento">
-                        <label for="s9C" class="asiento disponible">9C</label>
-                    </div>
-                </div>
-                <div class="pasillo"></div>
-                <div class="bloque-asientos">
-                    <div class="asiento-wrapper">
-                        <input type="radio" name="asiento" id="s9D" class="input-asiento">
-                        <label for="s9D" class="asiento disponible">9D</label>
-                    </div>
-                    <div class="asiento-wrapper">
-                        <input type="radio" name="asiento" id="s9E" class="input-asiento">
-                        <label for="s9E" class="asiento disponible">9E</label>
-                    </div>
-                    <div class="asiento ocupado">9F</div>
-                </div>
-            </div>
-
-            <div class="fila-asientos">
-                <div class="bloque-asientos">
-                    <div class="asiento ocupado">10A</div>
-                    <div class="asiento ocupado">10B</div>
-                    <div class="asiento ocupado">10C</div>
-                </div>
-                <div class="pasillo"></div>
-                <div class="bloque-asientos">
-                    <div class="asiento-wrapper">
-                        <input type="radio" name="asiento" id="s10D" class="input-asiento">
-                        <label for="s10D" class="asiento disponible">10D</label>
-                    </div>
-                    <div class="asiento-wrapper">
-                        <input type="radio" name="asiento" id="s10E" class="input-asiento">
-                        <label for="s10E" class="asiento disponible">10E</label>
-                    </div>
-                    <div class="asiento-wrapper">
-                        <input type="radio" name="asiento" id="s10F" class="input-asiento">
-                        <label for="s10F" class="asiento disponible">10F</label>
-                    </div>
-                </div>
-            </div>
-
         </div>
 
-        <div class="contenedor-botones">
-            <a href="Vuelos.html" class="btn-atras">Volver atrás</a>
-            <a href="usuario-desde-vuelo.html" class="btn-continuar">Continuar al pago</a>
+        <div class="fila-asientos">
+            <div class="bloque-asientos">
+                <div class="asiento-wrapper">
+                    <input type="radio" name="asiento" id="s2A" value="2A" class="input-asiento" required>
+                    <label for="s2A" class="asiento disponible">2A</label>
+                </div>
+                <div class="asiento ocupado">2B</div>
+                <div class="asiento-wrapper">
+                    <input type="radio" name="asiento" id="s2C" value="2C" class="input-asiento" required>
+                    <label for="s2C" class="asiento disponible">2C</label>
+                </div>
+            </div>
+            <div class="pasillo"></div>
+            <div class="bloque-asientos">
+                <div class="asiento-wrapper">
+                    <input type="radio" name="asiento" id="s2D" value="2D" class="input-asiento" required>
+                    <label for="s2D" class="asiento disponible">2D</label>
+                </div>
+                <div class="asiento-wrapper">
+                    <input type="radio" name="asiento" id="s2E" value="2E" class="input-asiento" required>
+                    <label for="s2E" class="asiento disponible">2E</label>
+                </div>
+                <div class="asiento-wrapper">
+                    <input type="radio" name="asiento" id="s2F" value="2F" class="input-asiento" required>
+                    <label for="s2F" class="asiento disponible">2F</label>
+                </div>
+            </div>
         </div>
+
+        <div class="fila-asientos">
+            <div class="bloque-asientos">
+                <div class="asiento-wrapper">
+                    <input type="radio" name="asiento" id="s3A" value="3A" class="input-asiento" required>
+                    <label for="s3A" class="asiento disponible">3A</label>
+                </div>
+                <div class="asiento-wrapper">
+                    <input type="radio" name="asiento" id="s3B" value="3B" class="input-asiento" required>
+                    <label for="s3B" class="asiento disponible">3B</label>
+                </div>
+                <div class="asiento ocupado">3C</div>
+            </div>
+            <div class="pasillo"></div>
+            <div class="bloque-asientos">
+                <div class="asiento ocupado">3D</div>
+                <div class="asiento-wrapper">
+                    <input type="radio" name="asiento" id="s3E" value="3E" class="input-asiento" required>
+                    <label for="s3E" class="asiento disponible">3E</label>
+                </div>
+                <div class="asiento-wrapper">
+                    <input type="radio" name="asiento" id="s3F" value="3F" class="input-asiento" required>
+                    <label for="s3F" class="asiento disponible">3F</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="fila-asientos">
+            <div class="bloque-asientos">
+                <div class="asiento ocupado">4A</div>
+                <div class="asiento ocupado">4B</div>
+                <div class="asiento-wrapper">
+                    <input type="radio" name="asiento" id="s4C" value="4C" class="input-asiento" required>
+                    <label for="s4C" class="asiento disponible">4C</label>
+                </div>
+            </div>
+            <div class="pasillo"></div>
+            <div class="bloque-asientos">
+                <div class="asiento-wrapper">
+                    <input type="radio" name="asiento" id="s4D" value="4D" class="input-asiento" required>
+                    <label for="s4D" class="asiento disponible">4D</label>
+                </div>
+                <div class="asiento-wrapper">
+                    <input type="radio" name="asiento" id="s4E" value="4E" class="input-asiento" required>
+                    <label for="s4E" class="asiento disponible">4E</label>
+                </div>
+                <div class="asiento ocupado">4F</div>
+            </div>
+        </div>
+
+        <div class="fila-asientos">
+            <div class="bloque-asientos">
+                <div class="asiento-wrapper">
+                    <input type="radio" name="asiento" id="s5A" value="5A" class="input-asiento" required>
+                    <label for="s5A" class="asiento disponible">5A</label>
+                </div>
+                <div class="asiento-wrapper">
+                    <input type="radio" name="asiento" id="s5B" value="5B" class="input-asiento" required>
+                    <label for="s5B" class="asiento disponible">5B</label>
+                </div>
+                <div class="asiento-wrapper">
+                    <input type="radio" name="asiento" id="s5C" value="5C" class="input-asiento" required>
+                    <label for="s5C" class="asiento disponible">5C</label>
+                </div>
+            </div>
+            <div class="pasillo"></div>
+            <div class="bloque-asientos">
+                <div class="asiento-wrapper">
+                    <input type="radio" name="asiento" id="s5D" value="5D" class="input-asiento" required>
+                    <label for="s5D" class="asiento disponible">5D</label>
+                </div>
+                <div class="asiento ocupado">5E</div>
+                <div class="asiento-wrapper">
+                    <input type="radio" name="asiento" id="s5F" value="5F" class="input-asiento" required>
+                    <label for="s5F" class="asiento disponible">5F</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="fila-asientos">
+            <div class="bloque-asientos">
+                <div class="asiento-wrapper">
+                    <input type="radio" name="asiento" id="s6A" value="6A" class="input-asiento" required>
+                    <label for="s6A" class="asiento disponible">6A</label>
+                </div>
+                <div class="asiento-wrapper">
+                    <input type="radio" name="asiento" id="s6B" value="6B" class="input-asiento" required>
+                    <label for="s6B" class="asiento disponible">6B</label>
+                </div>
+                <div class="asiento-wrapper">
+                    <input type="radio" name="asiento" id="s6C" value="6C" class="input-asiento" required>
+                    <label for="s6C" class="asiento disponible">6C</label>
+                </div>
+            </div>
+            <div class="pasillo"></div>
+            <div class="bloque-asientos">
+                <div class="asiento-wrapper">
+                    <input type="radio" name="asiento" id="s6D" value="6D" class="input-asiento" required>
+                    <label for="s6D" class="asiento disponible">6D</label>
+                </div>
+                <div class="asiento-wrapper">
+                    <input type="radio" name="asiento" id="s6E" value="6E" class="input-asiento" required>
+                    <label for="s6E" class="asiento disponible">6E</label>
+                </div>
+                <div class="asiento-wrapper">
+                    <input type="radio" name="asiento" id="s6F" value="6F" class="input-asiento" required>
+                    <label for="s6F" class="asiento disponible">6F</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="fila-asientos">
+            <div class="bloque-asientos">
+                <div class="asiento ocupado">7A</div>
+                <div class="asiento-wrapper">
+                    <input type="radio" name="asiento" id="s7B" value="7B" class="input-asiento" required>
+                    <label for="s7B" class="asiento disponible">7B</label>
+                </div>
+                <div class="asiento-wrapper">
+                    <input type="radio" name="asiento" id="s7C" value="7C" class="input-asiento" required>
+                    <label for="s7C" class="asiento disponible">7C</label>
+                </div>
+            </div>
+            <div class="pasillo"></div>
+            <div class="bloque-asientos">
+                <div class="asiento ocupado">7D</div>
+                <div class="asiento ocupado">7E</div>
+                <div class="asiento ocupado">7F</div>
+            </div>
+        </div>
+
+        <div class="fila-asientos">
+            <div class="bloque-asientos">
+                <div class="asiento-wrapper">
+                    <input type="radio" name="asiento" id="s8A" value="8A" class="input-asiento" required>
+                    <label for="s8A" class="asiento disponible">8A</label>
+                </div>
+                <div class="asiento-wrapper">
+                    <input type="radio" name="asiento" id="s8B" value="8B" class="input-asiento" required>
+                    <label for="s8B" class="asiento disponible">8B</label>
+                </div>
+                <div class="asiento-wrapper">
+                    <input type="radio" name="asiento" id="s8C" value="8C" class="input-asiento" required>
+                    <label for="s8C" class="asiento disponible">8C</label>
+                </div>
+            </div>
+            <div class="pasillo"></div>
+            <div class="bloque-asientos">
+                <div class="asiento-wrapper">
+                    <input type="radio" name="asiento" id="s8D" value="8D" class="input-asiento" required>
+                    <label for="s8D" class="asiento disponible">8D</label>
+                </div>
+                <div class="asiento-wrapper">
+                    <input type="radio" name="asiento" id="s8E" value="8E" class="input-asiento" required>
+                    <label for="s8E" class="asiento disponible">8E</label>
+                </div>
+                <div class="asiento-wrapper">
+                    <input type="radio" name="asiento" id="s8F" value="8F" class="input-asiento" required>
+                    <label for="s8F" class="asiento disponible">8F</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="fila-asientos">
+            <div class="bloque-asientos">
+                <div class="asiento-wrapper">
+                    <input type="radio" name="asiento" id="s9A" value="9A" class="input-asiento" required>
+                    <label for="s9A" class="asiento disponible">9A</label>
+                </div>
+                <div class="asiento ocupado">9B</div>
+                <div class="asiento-wrapper">
+                    <input type="radio" name="asiento" id="s9C" value="9C" class="input-asiento" required>
+                    <label for="s9C" class="asiento disponible">9C</label>
+                </div>
+            </div>
+            <div class="pasillo"></div>
+            <div class="bloque-asientos">
+                <div class="asiento-wrapper">
+                    <input type="radio" name="asiento" id="s9D" value="9D" class="input-asiento" required>
+                    <label for="s9D" class="asiento disponible">9D</label>
+                </div>
+                <div class="asiento-wrapper">
+                    <input type="radio" name="asiento" id="s9E" value="9E" class="input-asiento" required>
+                    <label for="s9E" class="asiento disponible">9E</label>
+                </div>
+                <div class="asiento ocupado">9F</div>
+            </div>
+        </div>
+
+        <div class="fila-asientos">
+            <div class="bloque-asientos">
+                <div class="asiento ocupado">10A</div>
+                <div class="asiento ocupado">10B</div>
+                <div class="asiento ocupado">10C</div>
+            </div>
+            <div class="pasillo"></div>
+            <div class="bloque-asientos">
+                <div class="asiento-wrapper">
+                    <input type="radio" name="asiento" id="s10D" value="10D" class="input-asiento" required>
+                    <label for="s10D" class="asiento disponible">10D</label>
+                </div>
+                <div class="asiento-wrapper">
+                    <input type="radio" name="asiento" id="s10E" value="10E" class="input-asiento" required>
+                    <label for="s10E" class="asiento disponible">10E</label>
+                </div>
+                <div class="asiento-wrapper">
+                    <input type="radio" name="asiento" id="s10F" value="10F" class="input-asiento" required>
+                    <label for="s10F" class="asiento disponible">10F</label>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="contenedor-botones">
+        <a href="Vuelos.html" class="btn-atras">Volver atrás</a>
+        <button type="submit" class="btn-continuar">Continuar con la compra</button>
+    </div>
+</form>
     </main>
 
     <footer>

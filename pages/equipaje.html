@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipaje</title>
+    <link rel="stylesheet" href="styles-equipaje.css">
+    <link rel="stylesheet" href="../header-footer.css">
+</head>
+
+<body>
+    <header>
+        <img src="../Images/arjet_logo_transparente.png" alt="Logotipo de ArJet">
+        <nav>
+            <a href="../index.html">Inicio</a>
+            <a href="Usuario.html">Iniciar Sesion</a>
+            <a href="Vuelos.html">Vuelos</a>
+            <a href="Ofertas.html">Ofertas</a>
+            <a href="Contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+<main>
+<h1 class="titulo">¿Con qué equipaje viajás?</h1>
+<form action="usuario-desde-vuelo.html" method="POST" class="formulario-equipaje">
+            
+            <div class="seccion-grupo">
+                <h2>1. Seleccioná el peso (Obligatorio)</h2>
+                <div class="contenedor-grid">
+                    <div class="cuadrado-opcion">
+                        <input type="radio" id="equipaje9kg" name="peso" value="9kg" required>
+                        <label for="equipaje9kg">Hasta 9Kg</label>
+                    </div>
+
+                    <div class="cuadrado-opcion">
+                        <input type="radio" id="equipaje12kg" name="peso" value="12kg" required>
+                        <label for="equipaje12kg">Hasta 12Kg</label>
+                    </div>
+
+                    <div class="cuadrado-opcion">
+                        <input type="radio" id="equipaje20kg" name="peso" value="20kg" required>
+                        <label for="equipaje20kg">Hasta 20Kg</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="seccion-grupo">
+                <h2>2. Tipo de equipaje extra (Obligatorio)</h2>
+                <div class="contenedor-grid">
+                    <div class="cuadrado-opcion">
+                        <input type="radio" id="equipajemano" name="tipo_extra" value="mano" required>
+                        <label for="equipajemano">Solo de mano</label>
+                    </div>
+
+                    <div class="cuadrado-opcion">
+                        <input type="radio" id="equipajeespecial" name="tipo_extra" value="especial" required>
+                        <label for="equipajeespecial">Solo especial</label>
+                    </div>
+
+                    <div class="cuadrado-opcion">
+                        <input type="radio" id="equipajemanoyespecial" name="tipo_extra" value="manoespecial" required>
+                        <label for="equipajemanoyespecial">Mano + Especial</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="seccion-grupo">
+                <h2>3. Adicionales (Opcional)</h2>
+                <div class="contenedor-grid-simple">
+                    <div class="cuadrado-opcion">
+                        <input type="checkbox" id="equipajemascota" name="mascota" value="mascota">
+                        <label for="equipajemascota">Mascota</label>
+                    </div>
+                </div>
+            </div>
+
+          <div class="contenedor-botones">
+        <a href="DetalleVuelo.html" class="btn-atras">Volver atrás</a>
+        <button type="submit" class="btn-continuar">Continuar con la compra</button>
+    </div>
+        </form>
+</main>
+
+
+<footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <img src="../Images/LOGO-a.jpeg" alt="Logo de ArJet" class="footer-logo">
+                <h2>ArJet</h2>
+                <nav>
+                    <a href="SobreNosotros.html">Sobre Nosotros</a>
+                    <a href="PoliticaDePrivacidad.html">Política de privacidad</a>
+                    <a href="PreguntasFrecuentes.html">Preguntas frecuentes</a>
+                </nav>
+            </div>
+            <div class="footer-col">
+                <h2>Enlaces</h2>
+                <nav>
+                    <a href="../index.html">Inicio</a>
+                    <a href="Vuelos.html">Vuelos</a>
+                    <a href="Ofertas.html">Ofertas</a>
+                </nav>
+            </div>
+            <div class="footer-col">
+                <h2>Síguenos</h2>
+                <nav>
+                    <a href="../redes-sociales/instagram.html">Instagram</a>
+                    <a href="../redes-sociales/facebook.html">Facebook</a>
+                    <a href="../redes-sociales/red-soc-x.html">X</a>
+                    <a href="../redes-sociales/tiktok.html">Tik-Tok</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
