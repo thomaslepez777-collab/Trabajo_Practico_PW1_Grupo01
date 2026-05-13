@@ -107,8 +107,13 @@ h1 {
   margin-top: 2rem;
 }
 
-#form-editar:target ~ main .form-editar { display: block; }
-#form-editar:target ~ main .tarjeta-perfil { display: none; }
+#form-editar:target~main .form-editar {
+  display: block;
+}
+
+#form-editar:target~main .tarjeta-perfil {
+  display: none;
+}
 
 .form-editar h2 {
   color: #005c84;
