@@ -150,9 +150,9 @@ h1 {
     background: #dc3545;
 }
 
-.leyenda-color.seleccionado {
+.leyenda-color.seleccionado { 
     background: #005c84;
-    border: 0.3rem
+    border: 0.3rem solid #00a8e8; 
 }
 
 .contenedor-botones {
@@ -198,4 +198,54 @@ h1 {
 .btn-continuar:hover {
     background: #00a8e8;
     transform: translateY(-0.2rem);
+}
+
+.resumen-vuelo {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.4rem 1rem rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 50rem;
+}
+
+.resumen-vuelo h3 {
+    color: #005c84;
+    border-bottom: 0.1rem solid #eee;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.ruta-detalle {
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #1a3a4a;
+}
+
+.pasajeros-detalle {
+    color: #666;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.total-resumen {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f0f4f7;
+    padding: 1.5rem;
+    border-radius: 0.8rem;
+    margin-top: 1rem;
+}
+
+.total-resumen span {
+    font-weight: bold;
+}
+
+.monto-total {
+    font-size: 2.2rem;
+    color: #005c84;
 }

@@ -4,58 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArJet - Mis Reservas</title>
+    <title>AMis Reservas</title>
     <link rel="stylesheet" href="styles-reservas.css">
     <link rel="stylesheet" href="../header-footer.css">
 </head>
 
 <body>
-    <header>
-        <img src="../Images/arjet_logo_transparente.png" alt="Logotipo de ArJet">
-        <nav>
-            <a href="../logueado_index.html">Inicio</a>
-            <a href="perfil_deUsuario.html">Mi Perfil</a>
-            <a href="Vuelos_Logeado.html">Vuelos</a>
-            <a href="Ofertas-logeado.html">Ofertas</a>
-            <a href="MisReservas.html">Mis Reservas</a>
-            <a href="Contacto-Logeado.html">Contacto</a>
-        </nav>
-    </header>
+  <header>
+    <img src="../Images/arjet_logo_transparente.png" alt="Logotipo de ArJet">
+    <nav>
+        <a href="../index.html">Inicio</a>
+        <a href="Vuelos.html">Vuelos</a>
+        <a href="Ofertas.html">Ofertas</a>
+        <a href="Contacto.html">Contacto</a>
 
-     <a href="../logueado_index.html" class="btn-volver">← Volver al menú</a>
+        <a href="Usuario.html" id="link-login">Iniciar Sesión</a>
+
+        <a href="perfil_deUsuario.html" id="link-perfil" style="display: none;">Mi Perfil</a>
+        <a href="MisReservas.html" id="link-reservas" style="display: none;">Mis Reservas</a>
+        <a href="#" id="link-logout" style="display: none;">Cerrar Sesión</a>
+    </nav>
+</header>
+
+    <a href="../index.html" class="btn-volver">← Volver al inicio</a>
+    
     <main>
         <h1>Mis Reservas</h1>
         <p class="subtitulo">Gestioná tus vuelos y revisá los detalles de tus próximos viajes.</p>
 
-
-        <details>
-            <summary>
-                <span>EZE ➔ MAD | 16 MAY 2026</span>
-            </summary>
-            <div class="contenido-reserva">
-                <p><strong>Pasajero:</strong> Juan Pérez</p>
-                <p><strong>Vuelo:</strong> AR-2540</p>
-                <p><strong>Asiento:</strong> 12C (Pasillo)</p>
-                <p><strong>Precio:</strong> $1.200 USD</p>
-                <p><strong>Estado:</strong> <span class="estado-confirmado">Confirmado</span></p>
-                <p><strong>Check-in:</strong> Disponible en 7 días</p>
-            </div>
-        </details>
-
-
-        <details>
-            <summary>
-                <span>EZE ➔ GIG | 05 Ene 2027</span>
-            </summary>
-            <div class="contenido-reserva">
-                <p><strong>Pasajero:</strong> Juan Pérez</p>
-                <p><strong>Vuelo:</strong> AR-8821</p>
-                <p><strong>Asiento:</strong> 04A (Ventana)</p>
-                <p><strong>Precio:</strong> $450 USD</p>
-                <p><strong>Estado:</strong> <span class="estado-confirmado">Pagado</span></p>
-                <p><strong>Check-in:</strong> Disponible 3 dias antes de tu vuelo </p>
-            </div>
-        </details>
+        <div id="contenedor-reservas"></div>
     </main>
 
     <footer>
@@ -88,6 +65,9 @@
             </div>
         </div>
     </footer>
+
+    <script src="../auth.js"></script>
+    <script src="../reservas.js"></script>
 </body>
 
 </html>

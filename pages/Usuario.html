@@ -4,70 +4,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArJet - Iniciar Sesión</title>
+    <title>Inicio de Sesion</title>
     <link rel="stylesheet" href="styles-usuario.css">
     <link rel="stylesheet" href="../header-footer.css">
 </head>
 
 <body>
-    <header>
-        <img src="../Images/arjet_logo_transparente.png" alt="Logotipo de ArJet">
-        <nav>
-            <a href="../index.html">Inicio</a>
-            <a href="../pages/Vuelos.html">Vuelos</a>
-            <a href="../pages/Ofertas.html">Ofertas</a>
-            <a href="../pages/Contacto.html">Contacto</a>
-        </nav>
-    </header>
+<header>
+    <img src="../Images/arjet_logo_transparente.png" alt="Logotipo de ArJet">
+    <nav>
+        <a href="../index.html">Inicio</a>
+        <a href="Vuelos.html">Vuelos</a>
+        <a href="Ofertas.html">Ofertas</a>
+        <a href="Contacto.html">Contacto</a>
+
+        <a href="Usuario.html" id="link-login">Iniciar Sesión</a>
+
+        <a href="perfil_deUsuario.html" id="link-perfil" style="display: none;">Mi Perfil</a>
+        <a href="MisReservas.html" id="link-reservas" style="display: none;">Mis Reservas</a>
+        <a href="#" id="link-logout" style="display: none;">Cerrar Sesión</a>
+    </nav>
+</header>
 
     <main>
-        <a href="../index.html" class="btn-volver">← Volver al menú</a>
+        <a href="../index.html" class="btn-volver">← Volver al inicio</a>
         <h1>Iniciar Sesión</h1>
-        <form action="../logueado_index.html" method="get">
+        
+        <form id="form-login">
             <label for="nombreUsuario">Nombre de Usuario</label>
             <input type="text" id="nombreUsuario" name="nombreUsuario" required placeholder="Tu usuario">
 
             <label for="contraseña">Contraseña</label>
             <input type="password" id="contraseña" name="contraseña" required placeholder="••••••••">
+            
+            <div style="text-align: right; margin-top: 0.5rem;">
+                <a href="RecuperarPassword.html" style="font-size: 1.4rem; color: #005c84;">¿Olvidaste tu contraseña?</a>
+            </div>
 
             <div class="botones-usuario">
                 <button type="submit">Ingresar</button>
                 <button type="reset">Borrar</button>
             </div>
         </form>
+        
         <p>¿No estás registrado? <a href="UsuarioNuevo.html">Crear cuenta nueva</a></p>
     </main>
 
-    <footer>
-        <div class="footer-container">
-            <div class="footer-col">
-                <img src="../Images/LOGO-a.jpeg" alt="Logo de ArJet" class="footer-logo">
-                <h2>ArJet</h2>
-                <nav>
-                    <a href="SobreNosotros.html">Sobre Nosotros</a>
-                    <a href="PoliticaDePrivacidad.html">Política de privacidad</a>
-                    <a href="PreguntasFrecuentes.html">Preguntas frecuentes</a>
-                </nav>
-            </div>
-            <div class="footer-col">
-                <h2>Enlaces</h2>
-                <nav>
-                    <a href="../index.html">Inicio</a>
-                    <a href="Vuelos.html">Vuelos</a>
-                    <a href="Ofertas.html">Ofertas</a>
-                </nav>
-            </div>
-            <div class="footer-col">
-                <h2>Síguenos</h2>
-                <nav>
-                    <a href="../redes-sociales/instagram.html">Instagram</a>
-                    <a href="../redes-sociales/facebook.html">Facebook</a>
-                    <a href="../redes-sociales/red-soc-x.html">X</a>
-                    <a href="../redes-sociales/tiktok.html">Tik-Tok</a>
-                </nav>
-            </div>
-        </div>
-    </footer>
+    <script src="../estado-usuario.js"></script>
+    <script src="sesion.js"></script>
 </body>
-
 </html>

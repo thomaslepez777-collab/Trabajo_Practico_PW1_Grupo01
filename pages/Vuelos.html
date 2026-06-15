@@ -10,32 +10,67 @@
 </head>
 
 <body>
-    <header>
-        <img src="../Images/arjet_logo_transparente.png" alt="Logotipo de ArJet">
-        <nav>
-            <a href="../index.html">Inicio</a>
-            <a href="Usuario.html">Iniciar sesion</a>
-            <a href="Vuelos.html">Vuelos</a>
-            <a href="Ofertas.html">Ofertas</a>
-            <a href="Contacto.html">Contacto</a>
-        </nav>
-    </header>
+<header>
+    <img src="../Images/arjet_logo_transparente.png" alt="Logotipo de ArJet">
+    <nav>
+        <a href="../index.html">Inicio</a>
+        <a href="Vuelos.html">Vuelos</a>
+        <a href="Ofertas.html">Ofertas</a>
+        <a href="Contacto.html">Contacto</a>
+
+        <a href="Usuario.html" id="link-login">Iniciar Sesión</a>
+
+        <a href="perfil_deUsuario.html" id="link-perfil" style="display: none;">Mi Perfil</a>
+        <a href="MisReservas.html" id="link-reservas" style="display: none;">Mis Reservas</a>
+        <a href="#" id="link-logout" style="display: none;">Cerrar Sesión</a>
+    </nav>
+</header>
     <main>
-        <aside class="sidebar-filtros">
-            <h2>Filtros</h2>
-            <details open>
-                <summary>Precio máximo</summary>
-                <input type="range" min="450" max="1200" step="50" value="1200">
-                <p>Hasta $1200 USD</p>
-            </details>
-            <details open>
-                <summary>Tipo de vuelo</summary>
-                <div style="display:flex; gap:1rem; margin:1rem 0;"><input type="checkbox" id="d" checked><label
-                        for="d">Directo</label></div>
-                <div style="display:flex; gap:1rem;"><input type="checkbox" id="e"><label for="e">Con escalas</label>
-                </div>
-            </details>
-        </aside>
+    <aside class="sidebar-filtros">
+    <h2>Filtros</h2>
+    
+    <details open>
+        <summary>Precio máximo</summary>
+        <input type="range" id="filtro-precio" min="450" max="1200" step="50" value="1200">
+        <p id="valor-precio">Hasta $1200 USD</p>
+    </details>
+    
+    <details open>
+        <summary>Tipo de vuelo</summary>
+        <div style="display:flex; gap:1rem; margin:1rem 0;">
+            <input type="checkbox" id="filtro-directo" value="Directo" checked>
+            <label for="filtro-directo">Directo</label>
+        </div>
+        <div style="display:flex; gap:1rem;">
+            <input type="checkbox" id="filtro-escalas" value="Con escalas">
+            <label for="filtro-escalas">Con escalas</label>
+        </div>
+    </details>
+
+    <details open>
+        <summary>Aerolínea</summary>
+        <div style="display:flex; gap:1rem; margin:1rem 0;">
+            <input type="checkbox" id="aero-arjet" value="ArJet" checked>
+            <label for="aero-arjet">ArJet</label>
+        </div>
+        <div style="display:flex; gap:1rem; margin-bottom:1rem;">
+            <input type="checkbox" id="aero-aerolineas" value="Aerolíneas Argentinas" checked>
+            <label for="aero-aerolineas">Aerolíneas Argentinas</label>
+        </div>
+        <div style="display:flex; gap:1rem;">
+            <input type="checkbox" id="aero-flybondi" value="Flybondi" checked>
+            <label for="aero-flybondi">Flybondi</label>
+        </div>
+    </details>
+
+    <details open>
+        <summary>Equipaje Incluido</summary>
+        <div style="display:flex; gap:1rem; margin:1rem 0;">
+            <input type="checkbox" id="equipaje-incluido" value="true">
+            <label for="equipaje-incluido">Mostrar solo opciones con equipaje</label>
+        </div>
+    </details>
+</aside>
         <section class="resultados-vuelos">
             <h1>Vuelos disponibles</h1>
             <div class="lista-vuelos-scroll">
@@ -100,6 +135,7 @@
             </div>
         </div>
     </footer>
+    <script src="vuelos.js"></script>
 </body>
 
 </html>

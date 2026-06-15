@@ -10,40 +10,45 @@
 </head>
 
 <body>
-    <header>
-        <img src="Images/arjet_logo_transparente.png" alt="Logotipo de ArJet">
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="pages/Usuario.html">Iniciar Sesion</a>
-            <a href="pages/Vuelos.html">Vuelos</a>
-            <a href="pages/Ofertas.html">Ofertas</a>
-            <a href="pages/Contacto.html">Contacto</a>
-        </nav>
-    </header>
+   <header>
+    <img src="Images/arjet_logo_transparente.png" alt="Logotipo de ArJet">
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="pages/Vuelos.html">Vuelos</a>
+        <a href="pages/Ofertas.html">Ofertas</a>
+        <a href="pages/Contacto.html">Contacto</a>
+
+        <a href="pages/Usuario.html" id="link-login">Iniciar Sesión</a>
+
+        <a href="pages/perfil_deUsuario.html" id="link-perfil" style="display: none;">Mi Perfil</a>
+        <a href="pages/MisReservas.html" id="link-reservas" style="display: none;">Mis Reservas</a>
+        <a href="#" id="link-logout" style="display: none;">Cerrar Sesión</a>
+    </nav>
+</header>
 
     <main>
         <section class="buscador-principal">
             <h1>Encontrá tu viaje</h1>
-            <form action="pages/Vuelos.html" method="GET">
-                <div class="opciones-viaje">
-                    <input type="radio" id="idaVuelta" name="tipoViaje" checked>
-                    <label for="idaVuelta">Ida y vuelta</label>
-                    <input type="radio" id="soloIda" name="tipoViaje">
-                    <label for="soloIda">Solo ida</label>
-                </div>
-                <div class="inputs-busqueda">
-                    <input type="text" placeholder="Origen" required>
-                    <input type="text" placeholder="Destino" required>
-                    <input type="date" required title="Fecha de salida">
-                    <input type="date" title="Fecha de regreso">
-                    <select title="Pasajeros" class="Pasajeros">
-                        <option value="1">1 Pasajero</option>
-                        <option value="2">2 Pasajeros</option>
-                        <option value="3">3 Pasajeros</option>
-                    </select>
-                </div>
-                <button type="submit">Buscar Vuelos</button>
-            </form>
+           <form id="form-buscador">
+    <div class="opciones-viaje">
+        <input type="radio" id="idaVuelta" name="tipoViaje" value="ida_vuelta" checked>
+        <label for="idaVuelta">Ida y vuelta</label>
+        <input type="radio" id="soloIda" name="tipoViaje" value="solo_ida">
+        <label for="soloIda">Solo ida</label>
+    </div>
+    <div class="inputs-busqueda">
+        <input type="text" id="origen" placeholder="Origen" required>
+        <input type="text" id="destino" placeholder="Destino" required>
+        <input type="date" id="fechaSalida" required title="Fecha de salida">
+        <input type="date" id="fechaRegreso" title="Fecha de regreso">
+        <select id="pasajeros" title="Pasajeros" class="Pasajeros">
+            <option value="1">1 Pasajero</option>
+            <option value="2">2 Pasajeros</option>
+            <option value="3">3 Pasajeros</option>
+        </select>
+    </div>
+    <button type="submit">Buscar Vuelos</button>
+</form>
         </section>
 
         <section class="destinos-sugeridos">
@@ -111,6 +116,7 @@
             </div>
         </div>
     </footer>
+    <script src="inicio.js"></script>
+       <script src="estado-usuario.js"></script>
 </body>
-
 </html>
