@@ -1,30 +1,31 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-document.querySelector('a[href="../index.html"]').addEventListener('click', () => {
-    localStorage.removeItem('filtroDestino');
-});
-document.querySelector('a[href="Vuelos.html"]').addEventListener('click', () => {
-    localStorage.removeItem('filtroDestino');
-});
-
+    const linksReset = document.querySelectorAll('a[href="../index.html"], a[href="Vuelos.html"]');
+    linksReset.forEach(link => {
+        link.addEventListener('click', () => {
+            localStorage.removeItem('filtroDestino');
+        });
+    });
     const linkLogin = document.getElementById('link-login');
     const linkPerfil = document.getElementById('link-perfil');
     const linkReservas = document.getElementById('link-reservas'); 
     const linkLogout = document.getElementById('link-logout');
 
-    const estaLogueado = localStorage.getItem('usuarioLogueado');
-
-    if (estaLogueado === 'true') {
-        if (linkLogin) linkLogin.style.display = 'none';
-        if (linkPerfil) linkPerfil.style.display = 'inline-block';
-        if (linkReservas) linkReservas.style.display = 'inline-block';
-        if (linkLogout) linkLogout.style.display = 'inline-block';
-    } else {
-        if (linkLogin) linkLogin.style.display = 'inline-block';
-        if (linkPerfil) linkPerfil.style.display = 'none';
-        if (linkReservas) linkReservas.style.display = 'none';
-        if (linkLogout) linkLogout.style.display = 'none';
-    }
+    const estaLogueado = localStorage.getItem('usuarioLogueado') === 'true';
+    const actualizarMenu = (logueado) => {
+        if (logueado) {
+            if (linkLogin) linkLogin.classList.add('link-oculto');
+            if (linkPerfil) linkPerfil.classList.remove('link-oculto');
+            if (linkReservas) linkReservas.classList.remove('link-oculto');
+            if (linkLogout) linkLogout.classList.remove('link-oculto');
+        } else {
+            if (linkLogin) linkLogin.classList.remove('link-oculto');
+            if (linkPerfil) linkPerfil.classList.add('link-oculto');
+            if (linkReservas) linkReservas.classList.add('link-oculto');
+            if (linkLogout) linkLogout.classList.add('link-oculto');
+        }
+    };
+    actualizarMenu(estaLogueado);
 
     if (linkLogout) {
         linkLogout.addEventListener('click', (e) => {

@@ -1,37 +1,9 @@
-html {
-    font-size: 62.5%;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-}
-
-body {
-    background-color: #f0f4f7;
-    color: #1a3a4a;
-    font-size: 1.6rem;
-}
-
-nav a {
-    text-decoration: none;
-    color: #005c84;
-    margin-left: 2.5rem;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    color: #00a8e8;
-}
-
 .buscador-principal {
     text-align: center;
     padding: 10rem 5%;
     background: linear-gradient(rgba(0, 92, 132, 0.8), rgba(0, 92, 132, 0.8)), url('Images/fondo-vuelos.jpg');
     background-size: cover;
+    background-position: center;
     color: white;
 }
 
@@ -41,18 +13,21 @@ nav a:hover {
 }
 
 .buscador-principal form {
-    background: white;
+    background: var(--blanco);
     padding: 3rem;
     border-radius: 1rem;
     display: inline-block;
-    color: #333;
+    color: var(--texto);
     box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.2);
+    width: 95%;
+    max-width: 80rem;
 }
 
 .inputs-busqueda {
     display: flex;
     gap: 1rem;
     margin-top: 1.5rem;
+    flex-wrap: wrap;
 }
 
 .inputs-busqueda input,
@@ -61,27 +36,14 @@ nav a:hover {
     border: 0.1rem solid #ccc;
     border-radius: 0.5rem;
     font-size: 1.4rem;
+    flex: 1;
+    min-width: 20rem;
 }
 
+.Pasajeros { cursor: pointer; }
 .Pasajeros:hover {
-    border-color: #00a8e8;
+    border-color: var(--secundario);
     box-shadow: 0 0 0.5rem rgba(0, 168, 232, 0.2);
-}
-
-.Pasajeros {
-    cursor: pointer;
-}
-
-button {
-    background-color: #005c84;
-    color: white;
-    border: none;
-    padding: 1.2rem 3rem;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    font-weight: bold;
-    margin-top: 2rem;
-    font-size: 1.6rem;
 }
 
 .destinos-sugeridos {
@@ -90,7 +52,7 @@ button {
 }
 
 .destinos-sugeridos h2 {
-    color: #005c84;
+    color: var(--primario);
     margin-bottom: 4rem;
     font-size: 2.5rem;
 }
@@ -104,7 +66,7 @@ button {
 
 .tarjeta-destino {
     text-decoration: none;
-    background: white;
+    background: var(--blanco);
     width: 28rem;
     border-radius: 1rem;
     overflow: hidden;
@@ -114,9 +76,7 @@ button {
     text-align: left;
 }
 
-.tarjeta-destino:hover {
-    transform: translateY(-1rem);
-}
+.tarjeta-destino:hover { transform: translateY(-1rem); }
 
 .tarjeta-destino img {
     width: 100%;
@@ -124,37 +84,42 @@ button {
     object-fit: cover;
 }
 
-.info-destino {
-    padding: 1.5rem;
-}
+.info-destino { padding: 1.5rem; }
 
 .info-destino h3 {
-    color: #005c84;
+    color: var(--primario);
     font-size: 1.8rem;
     margin-bottom: 0.5rem;
 }
 
-.info-destino p {
-    font-size: 1.4rem;
+.info-destino p { font-size: 1.4rem; }
+@media (max-width: 768px) {
+    .buscador-principal h1 { font-size: 2.4rem; }
+    .inputs-busqueda { flex-direction: column; }
 }
 
-.inputs-busqueda input[type="date"] {
-    position: relative;
-    cursor: pointer;
-}
-
-.inputs-busqueda input[type="date"]:hover {
-    border-color: #00a8e8;
-    box-shadow: 0 0 0.5rem rgba(0, 168, 232, 0.2);
-}
-
-.inputs-busqueda input[type="date"]::-webkit-calendar-picker-indicator {
-    position: absolute;
-    top: 0;
-    left: 0;
+button {
+    margin-top: 2rem;
+    display: block;
     width: 100%;
-    height: 100%;
-    background: transparent;
-    color: transparent;
+}
+
+.buscador-principal form {
+    text-align: center;
+}
+
+button {
+    background-color: var(--primario) !important;
+    color: var(--blanco) !important;
+    border: none;
+    padding: 1.2rem 3rem;
+    border-radius: 0.5rem;
     cursor: pointer;
+    font-weight: bold;
+    font-size: 1.6rem;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--secundario) !important;
 }
