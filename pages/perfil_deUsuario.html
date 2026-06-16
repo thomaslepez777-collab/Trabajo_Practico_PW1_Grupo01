@@ -10,121 +10,95 @@
 </head>
 
 <body>
-    <div id="form-editar"></div>
-   <header>
-    <img src="../Images/arjet_logo_transparente.png" alt="Logotipo de ArJet">
-    <nav>
-        <a href="../index.html">Inicio</a>
-        <a href="Vuelos.html">Vuelos</a>
-        <a href="Ofertas.html">Ofertas</a>
-        <a href="Contacto.html">Contacto</a>
+    <header>
+        <img src="../Images/arjet_logo_transparente.png" alt="Logotipo de ArJet">
+        <nav>
+            <a href="../index.html">Inicio</a>
+            <a href="Vuelos.html">Vuelos</a>
+            <a href="Ofertas.html">Ofertas</a>
+            <a href="Contacto.html">Contacto</a>
 
-        <a href="Usuario.html" id="link-login">Iniciar Sesión</a>
+            <a href="Usuario.html" id="link-login">Iniciar Sesión</a>
 
-        <a href="perfil_deUsuario.html" id="link-perfil" style="display: none;">Mi Perfil</a>
-        <a href="MisReservas.html" id="link-reservas" style="display: none;">Mis Reservas</a>
-        <a href="#" id="link-logout" style="display: none;">Cerrar Sesión</a>
-    </nav>
-</header>
+            <a href="perfil_deUsuario.html" id="link-perfil" class="link-oculto">Mi Perfil</a>
+            <a href="MisReservas.html" id="link-reservas" class="link-oculto">Mis Reservas</a>
+            <a href="#" id="link-logout" class="link-oculto">Cerrar Sesión</a>
+        </nav>
+    </header>
 
     <main>
-        <a href="../logueado_index.html" class="btn-volver">← Volver al menú</a>
+        <a href="../index.html" class="btn-volver">← Volver al menú</a>
         <h1>Mi Perfil</h1>
-        <div class="form-editar">
-            <h2>Modificar datos</h2>
-            <form action="#" method="get">
-                <label for="nombre">Nombre Completo</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Jorge Benítez">
+        
+<div class="form-editar" id="form-editar">
+    <h2>Modificar datos</h2>
+    <form id="form-datos-perfil">   
+</div>
+    <label for="input-nombre">Nombre Completo</label>
+    <input type="text" id="input-nombre" name="nombre">
 
-                <label for="nacionalidad">Nacionalidad</label>
-                <input type="text" id="nacionalidad" name="nacionalidad" placeholder="Argentina">
+    <label for="input-nacionalidad">Nacionalidad</label>
+    <input type="text" id="input-nacionalidad" name="nacionalidad">
 
-                <label for="dni">Número de Documento</label>
-                <input type="text" id="dni" name="dni" placeholder="12345678">
+    <label for="input-dni">Número de Documento</label>
+    <input type="text" id="input-dni" name="dni">
 
-                <label for="telefono">Número de Teléfono</label>
-                <input type="tel" id="telefono" name="telefono" placeholder="+54 9 11 1234 5678">
+    <label for="input-telefono">Número de Teléfono</label>
+    <input type="tel" id="input-telefono" name="telefono">
 
-                <label for="email">Correo Electrónico</label>
-                <input type="email" id="email" name="email" placeholder="jorge.benitez@email.com">
+    <label for="input-email">Correo Electrónico</label>
+    <input type="email" id="input-email" name="email">
 
-                <div class="botones-form">
-                    <button type="submit">Guardar cambios</button>
-                    <a href="#" class="btn-cancelar">Cancelar</a>
-                </div>
-            </form>
+    <fieldset>
+        <legend>Seguridad</legend>
+        <label for="input-pass-actual">Contraseña Actual</label>
+        <input type="password" id="input-pass-actual" placeholder="••••••••">
+
+        <label for="input-pass-nueva">Nueva Contraseña</label>
+        <input type="password" id="input-pass-nueva" placeholder="••••••••">
+    </fieldset>
+
+    <div class="botones-form">
+        <button type="submit">Guardar cambios</button>
+        <button type="button" id="btn-cancelar" class="btn-cancelar">Cancelar</button>
+    </div>
+</form>
         </div>
 
         <div class="tarjeta-perfil">
             <div class="campo-perfil">
                 <span>Nombre Completo</span>
-                <p>Jorge Fabian Benítez</p>
+                <p id="perfil-nombre">-</p>
             </div>
             <div class="campo-perfil">
                 <span>Nacionalidad</span>
-                <p>Argentina</p>
+                <p id="perfil-nacionalidad">-</p>
             </div>
             <div class="campo-perfil">
                 <span>Número de Documento</span>
-                <p>46.961.468</p>
+                <p id="perfil-dni">-</p>
             </div>
             <div class="campo-perfil">
                 <span>Número de Teléfono</span>
-                <p>+54 9 11 1234 5678</p>
+                <p id="perfil-telefono">-</p>
             </div>
             <div class="campo-perfil">
                 <span>Correo Electrónico</span>
-                <p>jorge.benitez@email.com</p>
+                <p id="perfil-email">-</p>
             </div>
-             <div class="campo-perfil">
+            <div class="campo-perfil">
                 <span>Nombre De Usuario</span>
-                <p>JorgeBenitez777</p>
+                <p id="perfil-usuario">-</p>
             </div>
-
-             <div class="campo-perfil">
-    <span>Contraseña</span>
-    <div class="password-container">
-        <input type="checkbox" id="show-password" class="toggle-check">
-        
-        <p class="pass-text">benitezfabian777</p>
-        
-        <label for="show-password" class="btn-eye">-</label>
-    </div>
-</div>
             <a href="#form-editar" class="btn-modificar">Modificar datos</a>
         </div>
     </main>
 
     <footer>
-        <div class="footer-container">
-            <div class="footer-col">
-                <img src="../Images/LOGO-a.jpeg" alt="Logo de ArJet" class="footer-logo">
-                <h2>ArJet</h2>
-                <nav>
-                    <a href="SobreNosotros.html">Sobre Nosotros</a>
-                    <a href="PoliticaDePrivacidad.html">Política de privacidad</a>
-                    <a href="PreguntasFrecuentes.html">Preguntas frecuentes</a>
-                </nav>
-            </div>
-            <div class="footer-col">
-                <h2>Enlaces</h2>
-                <nav>
-                    <a href="../logueado_index.html">Inicio</a>
-                    <a href="Vuelos_Logeado.html">Vuelos</a>
-                    <a href="Ofertas-logeado.html">Ofertas</a>
-                </nav>
-            </div>
-            <div class="footer-col">
-                <h2>Síguenos</h2>
-                <nav>
-                    <a href="../redes-sociales/instagram.html">Instagram</a>
-                    <a href="../redes-sociales/facebook.html">Facebook</a>
-                    <a href="../redes-sociales/red-soc-x.html">X</a>
-                    <a href="../redes-sociales/tiktok.html">Tik-Tok</a>
-                </nav>
-            </div>
-        </div>
-    </footer>
+        </footer>
+
+    <script src="../estado-usuario.js"></script>
+    <script src="perfil.js"></script>
 </body>
 
 </html>

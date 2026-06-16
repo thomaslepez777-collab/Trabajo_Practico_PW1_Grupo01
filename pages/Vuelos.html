@@ -10,101 +10,83 @@
 </head>
 
 <body>
-<header>
-    <img src="../Images/arjet_logo_transparente.png" alt="Logotipo de ArJet">
-    <nav>
-        <a href="../index.html">Inicio</a>
-        <a href="Vuelos.html">Vuelos</a>
-        <a href="Ofertas.html">Ofertas</a>
-        <a href="Contacto.html">Contacto</a>
+    <header>
+        <img src="../Images/arjet_logo_transparente.png" alt="Logotipo de ArJet">
+        <nav>
+            <a href="../index.html">Inicio</a>
+            <a href="Vuelos.html">Vuelos</a>
+            <a href="Ofertas.html">Ofertas</a>
+            <a href="Contacto.html">Contacto</a>
 
-        <a href="Usuario.html" id="link-login">Iniciar Sesión</a>
+            <a href="Usuario.html" id="link-login">Iniciar Sesión</a>
 
-        <a href="perfil_deUsuario.html" id="link-perfil" style="display: none;">Mi Perfil</a>
-        <a href="MisReservas.html" id="link-reservas" style="display: none;">Mis Reservas</a>
-        <a href="#" id="link-logout" style="display: none;">Cerrar Sesión</a>
-    </nav>
-</header>
+            <a href="perfil_deUsuario.html" id="link-perfil" class="link-oculto">Mi Perfil</a>
+            <a href="MisReservas.html" id="link-reservas" class="link-oculto">Mis Reservas</a>
+            <a href="#" id="link-logout" class="link-oculto">Cerrar Sesión</a>
+        </nav>
+    </header>
+    
     <main>
-    <aside class="sidebar-filtros">
-    <h2>Filtros</h2>
-    
-    <details open>
-        <summary>Precio máximo</summary>
-        <input type="range" id="filtro-precio" min="450" max="1200" step="50" value="1200">
-        <p id="valor-precio">Hasta $1200 USD</p>
-    </details>
-    
-    <details open>
-        <summary>Tipo de vuelo</summary>
-        <div style="display:flex; gap:1rem; margin:1rem 0;">
-            <input type="checkbox" id="filtro-directo" value="Directo" checked>
-            <label for="filtro-directo">Directo</label>
-        </div>
-        <div style="display:flex; gap:1rem;">
-            <input type="checkbox" id="filtro-escalas" value="Con escalas">
-            <label for="filtro-escalas">Con escalas</label>
-        </div>
-    </details>
+        <aside class="sidebar-filtros">
+            <h2>Filtros</h2>
+            
+            <details open>
+                <summary>Pasajeros</summary>
+                <div class="filtro-grupo">
+                    <label for="cantidad-pasajeros">Cantidad:</label>
+                    <input type="number" id="cantidad-pasajeros" min="1" max="10" value="1" class="input-pasajeros">
+                </div>
+            </details>
 
-    <details open>
-        <summary>Aerolínea</summary>
-        <div style="display:flex; gap:1rem; margin:1rem 0;">
-            <input type="checkbox" id="aero-arjet" value="ArJet" checked>
-            <label for="aero-arjet">ArJet</label>
-        </div>
-        <div style="display:flex; gap:1rem; margin-bottom:1rem;">
-            <input type="checkbox" id="aero-aerolineas" value="Aerolíneas Argentinas" checked>
-            <label for="aero-aerolineas">Aerolíneas Argentinas</label>
-        </div>
-        <div style="display:flex; gap:1rem;">
-            <input type="checkbox" id="aero-flybondi" value="Flybondi" checked>
-            <label for="aero-flybondi">Flybondi</label>
-        </div>
-    </details>
+            <details open>
+                <summary>Precio máximo</summary>
+                <input type="range" id="filtro-precio" min="450" max="1200" step="50" value="1200">
+                <p id="valor-precio">Hasta $1200 USD</p>
+            </details>
+            
+            <details open>
+                <summary>Tipo de vuelo</summary>
+                <div class="filtro-grupo">
+                    <input type="checkbox" id="filtro-directo" value="Directo" checked>
+                    <label for="filtro-directo">Directo</label>
+                </div>
+                <div class="filtro-grupo-fin">
+                    <input type="checkbox" id="filtro-escalas" value="Con escalas">
+                    <label for="filtro-escalas">Con escalas</label>
+                </div>
+            </details>
 
-    <details open>
-        <summary>Equipaje Incluido</summary>
-        <div style="display:flex; gap:1rem; margin:1rem 0;">
-            <input type="checkbox" id="equipaje-incluido" value="true">
-            <label for="equipaje-incluido">Mostrar solo opciones con equipaje</label>
-        </div>
-    </details>
-</aside>
+            <details open>
+                <summary>Aerolínea</summary>
+                <div class="filtro-grupo">
+                    <input type="checkbox" id="aero-arjet" value="ArJet" checked>
+                    <label for="aero-arjet">ArJet</label>
+                </div>
+                <div class="filtro-grupo">
+                    <input type="checkbox" id="aero-aerolineas" value="Aerolíneas Argentinas" checked>
+                    <label for="aero-aerolineas">Aerolíneas Argentinas</label>
+                </div>
+                <div class="filtro-grupo-fin">
+                    <input type="checkbox" id="aero-flybondi" value="Flybondi" checked>
+                    <label for="aero-flybondi">Flybondi</label>
+                </div>
+            </details>
+
+            <details open>
+                <summary>Equipaje Incluido</summary>
+                <div class="filtro-grupo">
+                    <input type="checkbox" id="equipaje-incluido" value="true">
+                    <label for="equipaje-incluido">Mostrar solo opciones con equipaje</label>
+                </div>
+            </details>
+        </aside>
+
         <section class="resultados-vuelos">
             <h1>Vuelos disponibles</h1>
-            <div class="lista-vuelos-scroll">
-                <article class="tarjeta-vuelo">
-                    <div class="info-ruta">
-                        <h3>Vuelo AR-2540</h3>
-                        <p>Buenos Aires (EZE) ➔ Madrid (MAD)</p><span>12h 00m | Directo</span>
-                    </div>
-                    <div style="text-align:right;">
-                        <p class="monto">$1200 USD</p><a href="DetalleVuelo.html"
-                            class="btn-seleccionar">Seleccionar</a>
-                    </div>
-                </article>
-                <article class="tarjeta-vuelo">
-                    <div class="info-ruta">
-                        <h3>Vuelo AR-1080</h3>
-                        <p>Buenos Aires (EZE) ➔ Roma (FCO)</p><span>15h 30m | 1 Escala</span>
-                    </div>
-                    <div style="text-align:right;">
-                        <p class="monto">$950 USD</p><a href="DetalleVuelo.html" class="btn-seleccionar">Seleccionar</a>
-                    </div>
-                </article>
-                <article class="tarjeta-vuelo">
-                    <div class="info-ruta">
-                        <h3>Vuelo AR-8821</h3>
-                        <p>Buenos Aires (EZE) ➔ Río (GIG)</p><span>3h 15m | Directo</span>
-                    </div>
-                    <div style="text-align:right;">
-                        <p class="monto">$450 USD</p><a href="DetalleVuelo.html" class="btn-seleccionar">Seleccionar</a>
-                    </div>
-                </article>
-            </div>
+            <div class="lista-vuelos-scroll"></div>
         </section>
     </main>
+
     <footer>
         <div class="footer-container">
             <div class="footer-col">
@@ -135,6 +117,8 @@
             </div>
         </div>
     </footer>
+    
+    <script src="../estado-usuario.js"></script>
     <script src="vuelos.js"></script>
 </body>
 

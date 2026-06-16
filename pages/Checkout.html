@@ -20,18 +20,17 @@
 
         <a href="Usuario.html" id="link-login">Iniciar Sesión</a>
 
-        <a href="perfil_deUsuario.html" id="link-perfil" style="display: none;">Mi Perfil</a>
-        <a href="MisReservas.html" id="link-reservas" style="display: none;">Mis Reservas</a>
-        <a href="#" id="link-logout" style="display: none;">Cerrar Sesión</a>
+        <a href="perfil_deUsuario.html" id="link-perfil" class="link-oculto">Mi Perfil</a>
+        <a href="MisReservas.html" id="link-reservas" class="link-oculto">Mis Reservas</a>
+        <a href="#" id="link-logout" class="link-oculto">Cerrar Sesión</a>
     </nav>
 </header>
 
     <main>
         <h1>Checkout</h1>
-        <form action="MisReservas.html" method="GET">
+        <form id="form-checkout">
             <h3>Seleccioná tu método de pago</h3>
             <div class="metodos-pago">
-                <!-- Tarjeta -->
                 <input type="radio" name="pago" id="radio-tarjeta" required>
                 <label for="radio-tarjeta" class="opcion-pago">Tarjeta de Crédito / Débito</label>
                 <div id="form-tarjeta" class="info-pago">
@@ -44,7 +43,6 @@
                     </div>
                 </div>
 
-                <!-- Transferencia -->
                 <input type="radio" name="pago" id="radio-transferencia">
                 <label for="radio-transferencia" class="opcion-pago">Transferencia Bancaria</label>
                 <div id="info-transferencia" class="info-pago">
@@ -53,14 +51,12 @@
                     <p><strong>Banco:</strong> ArJet Bank</p>
                 </div>
 
-                <!-- Efectivo -->
                 <input type="radio" name="pago" id="radio-efectivo">
                 <label for="radio-efectivo" class="opcion-pago">Efectivo (Pago Fácil / Rapipago)</label>
                 <div id="info-efectivo" class="info-pago">
                     <p>Se generará un código de pago al confirmar. Tenés 48hs para abonar en cualquier sucursal.</p>
                 </div>
 
-                <!-- Billetera Virtual -->
                 <input type="radio" name="pago" id="radio-billetera">
                 <label for="radio-billetera" class="opcion-pago">Billetera Virtual (Mercado Pago)</label>
                 <div id="info-billetera" class="info-pago">
@@ -70,7 +66,7 @@
 
             <div class="contenedor-botones">
                 <a href="Vuelos.html" class="btn-atras">Volver atrás</a>
-                <a href="MisReservas.html" class="btn-continuar">Continuar con la compra</a>
+                <button type="submit" class="btn-continuar">Continuar con la compra</button>
             </div>
         </form>
     </main>
@@ -105,6 +101,8 @@
             </div>
         </div>
     </footer>
+    <script src="../estado-usuario.js"></script>
+    <script src="checkout.js"></script>
 </body>
 
 </html>

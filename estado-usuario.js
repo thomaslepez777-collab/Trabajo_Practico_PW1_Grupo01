@@ -1,4 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+document.querySelector('a[href="../index.html"]').addEventListener('click', () => {
+    localStorage.removeItem('filtroDestino');
+});
+document.querySelector('a[href="Vuelos.html"]').addEventListener('click', () => {
+    localStorage.removeItem('filtroDestino');
+});
+
     const linkLogin = document.getElementById('link-login');
     const linkPerfil = document.getElementById('link-perfil');
     const linkReservas = document.getElementById('link-reservas'); 

@@ -28,7 +28,7 @@
 
 <main>
 <h1 class="titulo">¿Con qué equipaje viajás?</h1>
-<form action="usuario-desde-vuelo.html" method="POST" class="formulario-equipaje">
+<form class="formulario-equipaje">
             
             <div class="seccion-grupo">
                 <h2>1. Seleccioná el peso (Obligatorio)</h2>
@@ -80,10 +80,14 @@
                 </div>
             </div>
 
-          <div class="contenedor-botones">
-        <a href="DetalleVuelo.html" class="btn-atras">Volver atrás</a>
-        <button type="submit" class="btn-continuar">Continuar con la compra</button>
-    </div>
+       <div class="seccion-grupo resumen-equipaje">
+                <h2 class="titulo-total">Total actualizado: <span id="precio-total-equipaje" class="monto-total-equipaje">$0 USD</span></h2>
+            </div>
+
+            <div class="contenedor-botones">
+                <a href="DetalleVuelo.html" class="btn-atras">Volver atrás</a>
+                <button type="submit" class="btn-continuar">Continuar con la compra</button>
+            </div>
         </form>
 </main>
 
@@ -118,6 +122,9 @@
             </div>
         </div>
     </footer>
+
+    <script src="../estado-usuario.js"></script> 
+    <script src="equipaje.js"></script>
 </body>
 
 </html>

@@ -215,3 +215,13 @@ h1 {
     right: 0;
     background: white;
 }
+
+.form-editar {
+    display: none;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+}
+.form-editar:target {
+    display: block;
+}
