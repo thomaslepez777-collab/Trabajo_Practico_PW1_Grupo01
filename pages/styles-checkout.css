@@ -178,3 +178,159 @@ form h3 {
     background: #00a8e8;
     transform: translateY(-0.2rem);
 }
+
+/* === Resumen del vuelo === */
+.resumen-vuelo {
+    background: #e8f4f8;
+    border-left: 0.4rem solid #005c84;
+    border-radius: 1rem;
+    padding: 2rem 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.resumen-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 0;
+    border-bottom: 0.1rem solid #cce4ef;
+    font-size: 1.5rem;
+    color: #495057;
+}
+
+.resumen-item:last-child {
+    border-bottom: none;
+}
+
+.resumen-label {
+    font-weight: bold;
+    color: #1a3a4a;
+}
+
+.resumen-total {
+    margin-top: 0.5rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.resumen-total .resumen-label,
+.resumen-total span {
+    color: #005c84;
+}
+
+/* === Datos del pasajero === */
+.datos-pasajero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.campo-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.campo-form.campo-full {
+    grid-column: span 2;
+}
+
+.campo-form label {
+    font-weight: bold;
+    color: #1a3a4a;
+    font-size: 1.4rem;
+}
+
+.campo-form input {
+    padding: 1.2rem;
+    border: 0.1rem solid #ccc;
+    border-radius: 0.6rem;
+    font-size: 1.5rem;
+    transition: border-color 0.2s;
+}
+
+.campo-form input:focus {
+    border-color: #005c84;
+    outline: none;
+}
+
+/* === Mensajes de error === */
+.error-campo {
+    color: #dc3545;
+    font-size: 1.3rem;
+    min-height: 1.6rem;
+    display: block;
+}
+
+#error-pago {
+    display: block;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* === Cupón de descuento === */
+.cupon-container {
+    margin-bottom: 2rem;
+    padding: 2rem 2.5rem;
+    background: #f0f4f7;
+    border-radius: 1rem;
+}
+
+.cupon-container h3 {
+    border-bottom: none;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.cupon-form {
+    display: flex;
+    gap: 1rem;
+    align-items: stretch;
+}
+
+.cupon-form input {
+    flex: 1;
+    padding: 1.2rem;
+    border: 0.1rem solid #ccc;
+    border-radius: 0.6rem;
+    font-size: 1.5rem;
+    transition: border-color 0.2s;
+}
+
+.cupon-form input:focus {
+    border-color: #005c84;
+    outline: none;
+}
+
+.cupon-form button {
+    padding: 1.2rem 2.4rem;
+    background: #005c84;
+    color: white;
+    border: none;
+    border-radius: 0.6rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.cupon-form button:hover {
+    background: #00a8e8;
+}
+
+#mensaje-cupon {
+    display: block;
+    margin-top: 0.8rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    min-height: 1.8rem;
+}
+
+.mensaje-cupon-ok {
+    color: #28a745;
+}
+
+.mensaje-cupon-error {
+    color: #dc3545;
+}

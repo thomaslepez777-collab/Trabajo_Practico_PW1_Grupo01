@@ -30,9 +30,36 @@
     <main>
         <h1>Checkout</h1>
         <form id="form-checkout">
+
+            <h3>Resumen del vuelo</h3>
+            <div id="resumen-vuelo" class="resumen-vuelo"></div>
+
+            <h3>Datos del pasajero</h3>
+            <div class="datos-pasajero">
+                <div class="campo-form campo-full">
+                    <label for="nombre-pasajero">Nombre completo *</label>
+                    <input type="text" id="nombre-pasajero" placeholder="Nombre y apellido">
+                    <span class="error-campo" id="error-nombre"></span>
+                </div>
+                <div class="campo-form">
+                    <label for="dni-pasajero">Documento (DNI) *</label>
+                    <input type="text" id="dni-pasajero" placeholder="12345678" maxlength="8">
+                    <span class="error-campo" id="error-dni"></span>
+                </div>
+                <div class="campo-form">
+                    <label for="email-pasajero">Correo electrónico *</label>
+                    <input type="email" id="email-pasajero" placeholder="ejemplo@correo.com">
+                    <span class="error-campo" id="error-email"></span>
+                </div>
+                <div class="campo-form campo-full">
+                    <label for="tel-pasajero">Teléfono (opcional)</label>
+                    <input type="text" id="tel-pasajero" placeholder="+54 9 11 1234-5678">
+                </div>
+            </div>
+
             <h3>Seleccioná tu método de pago</h3>
             <div class="metodos-pago">
-                <input type="radio" name="pago" id="radio-tarjeta" required>
+                <input type="radio" name="pago" id="radio-tarjeta">
                 <label for="radio-tarjeta" class="opcion-pago">Tarjeta de Crédito / Débito</label>
                 <div id="form-tarjeta" class="info-pago">
                     <div class="grid-form">
@@ -64,6 +91,17 @@
                     <p>Serás redirigido para pagar con tu saldo o dinero en cuenta.</p>
                 </div>
             </div>
+
+            <div class="cupon-container">
+                <h3>¿Tenés un cupón de descuento?</h3>
+                <div class="cupon-form">
+                    <input type="text" id="input-cupon" placeholder="Ingresá tu código (ej: ARJET10)">
+                    <button type="button" id="btn-aplicar-cupon">Aplicar</button>
+                </div>
+                <span id="mensaje-cupon"></span>
+            </div>
+
+            <span class="error-campo" id="error-pago"></span>
 
             <div class="contenedor-botones">
                 <a href="Vuelos.html" class="btn-atras">Volver atrás</a>
