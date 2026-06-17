@@ -25,13 +25,14 @@ document.addEventListener('DOMContentLoaded', () => {
             if (linkLogout) linkLogout.classList.add('link-oculto');
         }
     };
-    actualizarMenu(estaLogueado);
+actualizarMenu(estaLogueado);
 
     if (linkLogout) {
         linkLogout.addEventListener('click', (e) => {
             e.preventDefault(); 
             localStorage.removeItem('usuarioLogueado'); 
-            window.location.href = '../index.html'; 
+            const rutaInicio = document.querySelector('nav a').getAttribute('href');
+            window.location.href = rutaInicio; 
         });
     }
 });

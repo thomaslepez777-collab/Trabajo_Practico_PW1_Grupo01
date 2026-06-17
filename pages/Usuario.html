@@ -5,25 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio de Sesion</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="styles-usuario.css">
     <link rel="stylesheet" href="../header-footer.css">
+    <link rel="stylesheet" href="../syles-global.css">
 </head>
 
 <body>
 <header>
     <img src="../Images/arjet_logo_transparente.png" alt="Logotipo de ArJet">
-    <nav>
-        <a href="../index.html">Inicio</a>
-        <a href="Vuelos.html">Vuelos</a>
-        <a href="Ofertas.html">Ofertas</a>
-        <a href="Contacto.html">Contacto</a>
+   <nav>
+    <a href="../index.html"><i class='bx bx-home-alt'></i> Inicio</a>
+    <a href="Vuelos.html"><i class='bx bx-paper-plane'></i> Vuelos</a>
+    <a href="Ofertas.html"><i class='bx bx-purchase-tag-alt'></i> Ofertas</a>
+    <a href="Contacto.html"><i class='bx bx-envelope'></i> Contacto</a>
 
-        <a href="Usuario.html" id="link-login">Iniciar Sesión</a>
+    <a href="Usuario.html" id="link-login"><i class='bx bx-user-circle'></i> Iniciar Sesión</a>
 
-        <a href="perfil_deUsuario.html" id="link-perfil" class="link-oculto">Mi Perfil</a>
-        <a href="MisReservas.html" id="link-reservas" class="link-oculto">Mis Reservas</a>
-        <a href="#" id="link-logout" class="link-oculto">Cerrar Sesión</a>
-    </nav>
+    <a href="perfil_deUsuario.html" id="link-perfil" class="link-oculto"><i class='bx bx-id-card'></i> Mi Perfil</a>
+    <a href="MisReservas.html" id="link-reservas" class="link-oculto"><i class='bx bx-briefcase-alt-2'></i> Mis Reservas</a>
+    <a href="#" id="link-logout" class="link-oculto"><i class='bx bx-log-out'></i> Cerrar Sesión</a>
+</nav>
 </header>
 
  <div id="aviso-compra" class="aviso-login aviso-oculto">
@@ -53,6 +55,37 @@
         
         <p>¿No estás registrado? <a href="UsuarioNuevo.html">Crear cuenta nueva</a></p>
     </main>
+
+      <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <img src="../Images/LOGO-a.jpeg" alt="Logo de ArJet" class="footer-logo">
+                <h2>ArJet</h2>
+                <nav>
+                    <a href="SobreNosotros.html">Sobre Nosotros</a>
+                    <a href="PoliticaDePrivacidad.html">Política de privacidad</a>
+                    <a href="PreguntasFrecuentes.html">Preguntas frecuentes</a>
+                </nav>
+            </div>
+            <div class="footer-col">
+                <h2>Enlaces</h2>
+                <nav>
+                    <a href="../index.html">Inicio</a>
+                    <a href="Vuelos.html">Vuelos</a>
+                    <a href="Ofertas.html">Ofertas</a>
+                </nav>
+            </div>
+            <div class="footer-col">
+                <h2>Síguenos</h2>
+                <nav>
+                    <a href="../redes-sociales/instagram.html">Instagram</a>
+                    <a href="../redes-sociales/facebook.html">Facebook</a>
+                    <a href="../redes-sociales/red-soc-x.html">X</a>
+                    <a href="../redes-sociales/tiktok.html">Tik-Tok</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
 
     <script src="../estado-usuario.js"></script>
     <script src="sesion.js"></script>

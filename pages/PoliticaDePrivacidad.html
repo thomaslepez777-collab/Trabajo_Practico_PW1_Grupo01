@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ArJet - Privacidad</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="styles-info.css">
     <link rel="stylesheet" href="../header-footer.css">
 </head>
@@ -12,18 +13,18 @@
 <body>
  <header>
     <img src="../Images/arjet_logo_transparente.png" alt="Logotipo de ArJet">
-    <nav>
-        <a href="../index.html">Inicio</a>
-        <a href="Vuelos.html">Vuelos</a>
-        <a href="Ofertas.html">Ofertas</a>
-        <a href="Contacto.html">Contacto</a>
+<nav>
+    <a href="../index.html"><i class='bx bx-home-alt'></i> Inicio</a>
+    <a href="Vuelos.html"><i class='bx bx-paper-plane'></i> Vuelos</a>
+    <a href="Ofertas.html"><i class='bx bx-purchase-tag-alt'></i> Ofertas</a>
+    <a href="Contacto.html"><i class='bx bx-envelope'></i> Contacto</a>
 
-        <a href="Usuario.html" id="link-login">Iniciar Sesión</a>
+    <a href="Usuario.html" id="link-login"><i class='bx bx-user-circle'></i> Iniciar Sesión</a>
 
-        <a href="perfil_deUsuario.html" id="link-perfil" style="display: none;">Mi Perfil</a>
-        <a href="MisReservas.html" id="link-reservas" style="display: none;">Mis Reservas</a>
-        <a href="#" id="link-logout" style="display: none;">Cerrar Sesión</a>
-    </nav>
+    <a href="perfil_deUsuario.html" id="link-perfil" class="link-oculto"><i class='bx bx-id-card'></i> Mi Perfil</a>
+    <a href="MisReservas.html" id="link-reservas" class="link-oculto"><i class='bx bx-briefcase-alt-2'></i> Mis Reservas</a>
+    <a href="#" id="link-logout" class="link-oculto"><i class='bx bx-log-out'></i> Cerrar Sesión</a>
+</nav>
 </header>
 
     <main>
@@ -64,6 +65,7 @@
             </div>
         </div>
     </footer>
+    <script src="../estado-usuario.js"></script>
 </body>
 
 </html>

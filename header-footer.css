@@ -10,7 +10,9 @@ header {
     z-index: 1000;
 }
 
-header img { height: 5rem; }
+header img { 
+    height: 5rem; 
+}
 
 header nav {
     display: flex;
@@ -23,9 +25,18 @@ header nav a {
     color: var(--primario, #005c84);
     font-weight: bold;
     transition: 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-header nav a:hover { color: var(--secundario, #00a8e8); }
+header nav a i {
+    font-size: 1.3em;
+}
+
+header nav a:hover { 
+    color: var(--secundario, #00a8e8); 
+}
 
 footer {
     background-color: #1a3a4a;
@@ -65,18 +76,27 @@ footer {
     text-decoration: none;
     margin: 0.5rem 0;
     font-size: 1.4rem;
+    transition: 0.3s;
+}
+
+.footer-col nav a:hover {
+    color: var(--blanco, #ffffff);
+}
+
+.link-oculto {
+    display: none !important;
 }
 
 @media (max-width: 768px) {
-    header { flex-direction: column; gap: 1.5rem; }
-    .footer-container { flex-direction: column; text-align: center; }
-}
-
-header nav {
-        display: flex;
+    header { 
+        flex-direction: column; 
+        gap: 1.5rem; 
+    }
+    
+    header nav {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 1rem;
+        gap: 1.5rem;
         width: 100%;
     }
 
@@ -84,8 +104,9 @@ header nav {
         font-size: 1.4rem;
         margin-left: 0;
     }
-    .footer-container { flex-direction: column; text-align: center; }
 
-    .link-oculto {
-    display: none !important;
+    .footer-container { 
+        flex-direction: column; 
+        text-align: center; 
+    }
 }

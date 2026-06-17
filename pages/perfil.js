@@ -1,15 +1,36 @@
 document.addEventListener('DOMContentLoaded', () => {
     const formPerfil = document.getElementById('form-datos-perfil');
+    const formContenedor = document.getElementById('form-editar');
+    const tarjetaPerfil = document.getElementById('tarjeta-perfil');
+    const btnModificar = document.getElementById('btn-modificar-datos');
+    const btnCancelar = document.getElementById('btn-cancelar');
+
     const datosGuardados = JSON.parse(localStorage.getItem('datosUsuario')) || {};
+
+    // 1. Llenar los textos de la tarjeta de perfil
     document.getElementById('perfil-nombre').textContent = datosGuardados.nombre || '-';
+    document.getElementById('perfil-nacionalidad').textContent = datosGuardados.nacionalidad || '-';
+    document.getElementById('perfil-dni').textContent = datosGuardados.dni || '-';
+    document.getElementById('perfil-telefono').textContent = datosGuardados.telefono || '-';
     document.getElementById('perfil-email').textContent = datosGuardados.email || '-';
+    document.getElementById('perfil-usuario').textContent = datosGuardados.usuario || '-';
     
+    // 2. Llenar los inputs del formulario
     document.getElementById('input-nombre').value = datosGuardados.nombre || '';
     document.getElementById('input-email').value = datosGuardados.email || '';
     document.getElementById('input-nacionalidad').value = datosGuardados.nacionalidad || '';
     document.getElementById('input-dni').value = datosGuardados.dni || '';
     document.getElementById('input-telefono').value = datosGuardados.telefono || '';
 
+    btnModificar.addEventListener('click', () => {
+        formContenedor.classList.remove('oculto');
+        tarjetaPerfil.classList.add('oculto');
+    });
+
+    btnCancelar.addEventListener('click', () => {
+        formContenedor.classList.add('oculto');
+        tarjetaPerfil.classList.remove('oculto');
+    });
     formPerfil.addEventListener('submit', (e) => {
         e.preventDefault();
         
@@ -38,12 +59,9 @@ document.addEventListener('DOMContentLoaded', () => {
             telefono: document.getElementById('input-telefono').value,
             password: nuevaPassword
         };
+        
         localStorage.setItem('datosUsuario', JSON.stringify(nuevosDatos));
         alert('Cambios guardados con éxito.');
-        location.reload();
-    });
-
-    document.getElementById('btn-cancelar').addEventListener('click', () => {
         location.reload();
     });
 });

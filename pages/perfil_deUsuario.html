@@ -5,67 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ArJet - Mi Perfil</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../header-footer.css">
     <link rel="stylesheet" href="perfil_deUsuario.css">
+    <link rel="stylesheet" href="../syles-global.css">
 </head>
 
 <body>
     <header>
         <img src="../Images/arjet_logo_transparente.png" alt="Logotipo de ArJet">
-        <nav>
-            <a href="../index.html">Inicio</a>
-            <a href="Vuelos.html">Vuelos</a>
-            <a href="Ofertas.html">Ofertas</a>
-            <a href="Contacto.html">Contacto</a>
+       <nav>
+    <a href="../index.html"><i class='bx bx-home-alt'></i> Inicio</a>
+    <a href="Vuelos.html"><i class='bx bx-paper-plane'></i> Vuelos</a>
+    <a href="Ofertas.html"><i class='bx bx-purchase-tag-alt'></i> Ofertas</a>
+    <a href="Contacto.html"><i class='bx bx-envelope'></i> Contacto</a>
 
-            <a href="Usuario.html" id="link-login">Iniciar Sesión</a>
+    <a href="Usuario.html" id="link-login"><i class='bx bx-user-circle'></i> Iniciar Sesión</a>
 
-            <a href="perfil_deUsuario.html" id="link-perfil" class="link-oculto">Mi Perfil</a>
-            <a href="MisReservas.html" id="link-reservas" class="link-oculto">Mis Reservas</a>
-            <a href="#" id="link-logout" class="link-oculto">Cerrar Sesión</a>
-        </nav>
+    <a href="perfil_deUsuario.html" id="link-perfil" class="link-oculto"><i class='bx bx-id-card'></i> Mi Perfil</a>
+    <a href="MisReservas.html" id="link-reservas" class="link-oculto"><i class='bx bx-briefcase-alt-2'></i> Mis Reservas</a>
+    <a href="#" id="link-logout" class="link-oculto"><i class='bx bx-log-out'></i> Cerrar Sesión</a>
+</nav>
     </header>
 
     <main>
         <a href="../index.html" class="btn-volver">← Volver al menú</a>
         <h1>Mi Perfil</h1>
         
-<div class="form-editar" id="form-editar">
-    <h2>Modificar datos</h2>
-    <form id="form-datos-perfil">   
-</div>
-    <label for="input-nombre">Nombre Completo</label>
-    <input type="text" id="input-nombre" name="nombre">
-
-    <label for="input-nacionalidad">Nacionalidad</label>
-    <input type="text" id="input-nacionalidad" name="nacionalidad">
-
-    <label for="input-dni">Número de Documento</label>
-    <input type="text" id="input-dni" name="dni">
-
-    <label for="input-telefono">Número de Teléfono</label>
-    <input type="tel" id="input-telefono" name="telefono">
-
-    <label for="input-email">Correo Electrónico</label>
-    <input type="email" id="input-email" name="email">
-
-    <fieldset>
-        <legend>Seguridad</legend>
-        <label for="input-pass-actual">Contraseña Actual</label>
-        <input type="password" id="input-pass-actual" placeholder="••••••••">
-
-        <label for="input-pass-nueva">Nueva Contraseña</label>
-        <input type="password" id="input-pass-nueva" placeholder="••••••••">
-    </fieldset>
-
-    <div class="botones-form">
-        <button type="submit">Guardar cambios</button>
-        <button type="button" id="btn-cancelar" class="btn-cancelar">Cancelar</button>
-    </div>
-</form>
-        </div>
-
-        <div class="tarjeta-perfil">
+        <div class="tarjeta-perfil" id="tarjeta-perfil">
             <div class="campo-perfil">
                 <span>Nombre Completo</span>
                 <p id="perfil-nombre">-</p>
@@ -90,7 +57,41 @@
                 <span>Nombre De Usuario</span>
                 <p id="perfil-usuario">-</p>
             </div>
-            <a href="#form-editar" class="btn-modificar">Modificar datos</a>
+            <button type="button" id="btn-modificar-datos" class="btn-modificar">Modificar datos</button>
+        </div>
+
+        <div class="form-editar oculto" id="form-editar">
+            <h2>Modificar datos</h2>
+            <form id="form-datos-perfil">   
+                <label for="input-nombre">Nombre Completo</label>
+                <input type="text" id="input-nombre" name="nombre">
+
+                <label for="input-nacionalidad">Nacionalidad</label>
+                <input type="text" id="input-nacionalidad" name="nacionalidad">
+
+                <label for="input-dni">Número de Documento</label>
+                <input type="text" id="input-dni" name="dni">
+
+                <label for="input-telefono">Número de Teléfono</label>
+                <input type="tel" id="input-telefono" name="telefono">
+
+                <label for="input-email">Correo Electrónico</label>
+                <input type="email" id="input-email" name="email">
+
+                <fieldset>
+                    <legend>Seguridad</legend>
+                    <label for="input-pass-actual">Contraseña Actual</label>
+                    <input type="password" id="input-pass-actual" placeholder="••••••••">
+
+                    <label for="input-pass-nueva">Nueva Contraseña</label>
+                    <input type="password" id="input-pass-nueva" placeholder="••••••••">
+                </fieldset>
+
+                <div class="botones-form">
+                    <button type="submit">Guardar cambios</button>
+                    <button type="button" id="btn-cancelar" class="btn-cancelar">Cancelar</button>
+                </div>
+            </form>
         </div>
     </main>
 
