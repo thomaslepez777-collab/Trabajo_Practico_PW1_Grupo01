@@ -110,7 +110,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 fechaIda: busqueda.fechaIda || "A confirmar",
                 precioTotal: precioFinal,
                 asientos: asientos,
-                estado: "Pagado"
+                estado: "Pagado",
+                pasajeros: nombre
             };
 
             let historialReservas = JSON.parse(localStorage.getItem('historialReservas')) || [];

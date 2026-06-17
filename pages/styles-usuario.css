@@ -102,6 +102,12 @@ button[type="reset"]:hover {
     background-color: #ddd;
 }
 
+.mensaje-exito {
+    color: #28a745;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
 main p {
     margin-top: 2rem;
     font-size: 1.4rem;
