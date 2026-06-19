@@ -6,12 +6,16 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.removeItem('filtroDestino');
         });
     });
+    
     const linkLogin = document.getElementById('link-login');
     const linkPerfil = document.getElementById('link-perfil');
     const linkReservas = document.getElementById('link-reservas'); 
     const linkLogout = document.getElementById('link-logout');
 
-    const estaLogueado = localStorage.getItem('usuarioLogueado') === 'true';
+    // Si hay un nombre guardado, significa que está logueado
+    const usuarioActivo = localStorage.getItem('arjet_usuario_activo');
+    const estaLogueado = usuarioActivo !== null; 
+
     const actualizarMenu = (logueado) => {
         if (logueado) {
             if (linkLogin) linkLogin.classList.add('link-oculto');
@@ -25,13 +29,16 @@ document.addEventListener('DOMContentLoaded', () => {
             if (linkLogout) linkLogout.classList.add('link-oculto');
         }
     };
-actualizarMenu(estaLogueado);
+    
+    actualizarMenu(estaLogueado);
 
     if (linkLogout) {
         linkLogout.addEventListener('click', (e) => {
             e.preventDefault(); 
-            localStorage.removeItem('usuarioLogueado'); 
-            const rutaInicio = document.querySelector('nav a').getAttribute('href');
+            // Removemos al usuario activo
+            localStorage.removeItem('arjet_usuario_activo'); 
+            
+            const rutaInicio = document.querySelector('nav a') ? document.querySelector('nav a').getAttribute('href') : '../index.html';
             window.location.href = rutaInicio; 
         });
     }

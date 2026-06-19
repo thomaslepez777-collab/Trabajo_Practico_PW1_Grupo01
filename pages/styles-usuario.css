@@ -1,31 +1,17 @@
-nav a {
-    text-decoration: none;
-    color: var(--primario);
-    margin-left: 2rem;
-    font-weight: bold;
-}
-
 main {
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    padding: 2rem;
-    overflow-y: auto;
+    justify-content: center;
+    padding: 4rem 2rem;
+    min-height: 80vh;
 }
 
-h1 {
-    color: var(--primario);
-    margin-bottom: 2rem;
-    font-size: 3rem;
-    text-align: center;
-}
-
-form {
+.form-usuario {
     background: var(--blanco);
-    padding: 3rem;
-    border-radius: 1.5rem;
+    padding: 4rem;
+    border-radius: 1rem;
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 45rem;
@@ -33,111 +19,30 @@ form {
     flex-direction: column;
 }
 
-label {
+.label-usuario {
     margin-top: 1.5rem;
-    font-weight: bold;
+    font-weight: 600;
     color: var(--texto);
     font-size: 1.4rem;
+    margin-bottom: 0.5rem;
 }
 
-input {
-    padding: 1.2rem;
-    margin-top: 0.5rem;
-    border: 0.1rem solid #ddd;
-    border-radius: 0.8rem;
+.input-usuario {
+    padding: 1.2rem 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
     font-size: 1.4rem;
-    color: var(--texto);
-    caret-color: var(--primario);
-    background-color: var(--blanco);
+    background-color: #fafafa;
+    transition: all 0.3s ease;
 }
 
-.link-recuperar-contenedor {
-    margin-top: 1rem;
-    text-align: right;
+.input-usuario:focus {
+    border-color: var(--primario);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 92, 132, 0.1);
 }
 
-.link-recuperar {
-    color: var(--primario);
-    font-size: 1.3rem;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.link-recuperar:hover {
-    color: var(--secundario);
-    text-decoration: underline;
-}
-
-.botones-usuario {
-    margin-top: 2.5rem;
-    display: flex;
-    gap: 1rem;
-}
-
-button {
-    flex: 1;
-    padding: 1.2rem;
-    border: none;
-    border-radius: 0.8rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button[type="submit"] {
-    background-color: var(--primario);
-    color: var(--blanco);
-}
-
-button[type="submit"]:hover {
-    background-color: var(--secundario);
-}
-
-button[type="reset"] {
-    background-color: #eee;
-    color: #666;
-}
-
-button[type="reset"]:hover {
-    background-color: #ddd;
-}
-
-.mensaje-exito {
-    color: #28a745;
-    font-weight: bold;
-    margin: 15px 0;
-}
-
-main p {
-    margin-top: 2rem;
-    font-size: 1.4rem;
-    color: #666;
-    text-align: center;
-}
-
-main p a {
-    color: var(--primario);
-    font-weight: bold;
-    text-decoration: none;
-}
-
-main p a:hover {
-    color: var(--secundario);
-}
-
-.btn-volver {
-    align-self: flex-start;
-    color: var(--primario);
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 2.4rem;
-    margin-bottom: 1rem;
-}
-
-.aviso-oculto {
-    display: none;
-}
-
+/* --- Aviso decorado (El que se rompió) --- */
 .aviso-login {
     background-color: #e8f4f8;
     color: var(--primario);
@@ -145,38 +50,55 @@ main p a:hover {
     border-radius: 0.8rem;
     text-align: center;
     margin-bottom: 2rem;
-    border: 2px solid var(--primario);
+    /* Recuperamos tu borde decorativo */
+    border: 2px solid var(--primario); 
     font-weight: bold;
+    max-width: 50rem;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+/* --- Clases de control (JS) --- */
+.aviso-oculto {
+    display: none !important;
+}
+
+/* --- Botones --- */
+.botones-usuario {
+    margin-top: 3rem;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.btn-usuario {
+    flex: 1;
+    padding: 1.4rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-submit { background-color: var(--primario); color: var(--blanco); }
+.btn-submit:hover { background-color: var(--secundario); }
+
+.btn-reset { background-color: var(--fondo); color: var(--texto); border: 1px solid #ddd; }
+.btn-reset:hover { background-color: #e2e8ec; }
+
+.link-recuperar {
+    display: block;
+    margin-top: 1rem;
+    color: var(--secundario);
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+
+/* Responsividad: en móviles, ocupamos el ancho total con poco margen */
 @media (max-width: 768px) {
-    main {
-        padding: 1.5rem;
-    }
-
-    h1 {
-        font-size: 2.4rem;
-    }
-
-    form {
-        padding: 2rem 1.5rem;
-    }
-
-    .botones-usuario {
-        flex-direction: column;
-        gap: 1.5rem;
-    }
-
-    button {
-        width: 100%;
-        padding: 1.5rem;
-    }
-
-    .btn-volver {
-        font-size: 1.8rem;
-    }
-    
-    nav a {
-        margin-left: 1rem;
-        font-size: 1.4rem;
+    .form-usuario {
+        padding: 3rem 2rem;
+        width: 90%; /* Un poco de aire a los costados */
     }
 }

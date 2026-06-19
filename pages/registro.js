@@ -13,19 +13,26 @@ document.addEventListener('DOMContentLoaded', () => {
             const usuario = document.getElementById('usuario').value.trim();
             const password = document.getElementById('password').value;
 
-            const nuevosDatos = {
+            let usuariosBD = JSON.parse(localStorage.getItem('arjet_usuarios')) || {};
+
+            if (usuariosBD[usuario]) {
+                alert("Ese nombre de usuario ya está registrado. Elegí otro.");
+                return;
+            }
+
+            usuariosBD[usuario] = {
                 nombre: nombre,
                 nacionalidad: nacionalidad,
                 dni: dni,
                 telefono: telefono,
                 email: email,
-                usuario: usuario,
-                password: password
+                password: password,
+                reservas: [] 
             };
 
-            localStorage.setItem('datosUsuario', JSON.stringify(nuevosDatos));
+            localStorage.setItem('arjet_usuarios', JSON.stringify(usuariosBD));
 
-            localStorage.setItem('usuarioLogueado', 'true');
+            localStorage.setItem('arjet_usuario_activo', usuario);
 
             window.location.href = '../index.html';
         });

@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const estaLogueado = localStorage.getItem('usuarioLogueado');
-    if (estaLogueado !== 'true') {
+    // Validamos que haya un usuario activo con el nuevo sistema
+    const usuarioActivo = localStorage.getItem('arjet_usuario_activo');
+    if (!usuarioActivo) {
         window.location.href = 'Usuario.html';
         return;
     }
@@ -97,12 +98,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (!valido) return;
 
-            // Lógica original de reserva (precio con descuento aplicado)
             const precioBase = parseFloat(localStorage.getItem('precioTotalFinal') || localStorage.getItem('precioTotalReserva') || 0);
             const precioFinal = precioBase * (1 - descuentoAplicado);
             const asientos = localStorage.getItem('asientosSeleccionados') || 'No asignado';
             const busquedaGuardada = localStorage.getItem('busquedaVuelo');
             const busqueda = busquedaGuardada ? JSON.parse(busquedaGuardada) : {origen: 'EZE', destino: 'MAD'};
+            
             const nuevaReserva = {
                 idReserva: "AR-" + Math.floor(Math.random() * 10000) + "X",
                 origen: busqueda.origen.toUpperCase(),
@@ -111,14 +112,27 @@ document.addEventListener('DOMContentLoaded', () => {
                 precioTotal: precioFinal,
                 asientos: asientos,
                 estado: "Pagado",
-                pasajeros: nombre
+                pasajeros: nombre,
+                checkin: false // Agregamos esto para que sirva con el botón de checkin de tus reservas
             };
 
-            let historialReservas = JSON.parse(localStorage.getItem('historialReservas')) || [];
-            historialReservas.push(nuevaReserva);
-            localStorage.setItem('historialReservas', JSON.stringify(historialReservas));
+            // ACÁ OCURRE LA MAGIA DE LAS MULTICUENTAS
+            // 1. Traemos toda la base de datos de usuarios
+            let usuariosBD = JSON.parse(localStorage.getItem('arjet_usuarios')) || {};
+            
+            // 2. Le inyectamos la reserva solo al usuario activo
+            if(usuariosBD[usuarioActivo]) {
+                usuariosBD[usuarioActivo].reservas.push(nuevaReserva);
+            }
+
+            // 3. Guardamos la base de datos entera de nuevo
+            localStorage.setItem('arjet_usuarios', JSON.stringify(usuariosBD));
+            
+            // Limpiamos los datos temporales del carrito
             localStorage.removeItem('precioTotalFinal');
             localStorage.removeItem('asientosSeleccionados');
+            localStorage.removeItem('precioTotalReserva');
+            
             window.location.href = 'MisReservas.html';
         });
     }

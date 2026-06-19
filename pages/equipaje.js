@@ -52,9 +52,11 @@ document.addEventListener('DOMContentLoaded', () => {
             evento.preventDefault();
             
             localStorage.setItem('precioTotalFinal', precioFinal);
-            const estaLogueado = localStorage.getItem('usuarioLogueado');
+            
+            // Verificamos con el nuevo sistema de multicuentas
+            const usuarioActivo = localStorage.getItem('arjet_usuario_activo');
 
-            if (estaLogueado === 'true') {
+            if (usuarioActivo) { // Si hay un nombre guardado, está logueado
                 window.location.href = 'Checkout.html';
             } else {
                 localStorage.setItem('redireccionPostLogin', 'Checkout.html');

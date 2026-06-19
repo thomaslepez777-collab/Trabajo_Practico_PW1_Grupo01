@@ -18,15 +18,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const vuelosDisponibles = [
-    { id: 1, destino: 'Miami', aerolinea: "ArJet", precio: 800, duracion: "08:40", horarioIda: "12:00", tipo: "Directo", equipaje: true },
-    { id: 2, destino: 'Roma', aerolinea: "Aerolíneas Argentinas", precio: 950, duracion: "15:30", horarioIda: "09:00", tipo: "Con escalas", equipaje: true },
-    { id: 3, destino: 'Madrid', aerolinea: "Flybondi", precio: 1100, duracion: "07:30", horarioIda: "06:00", tipo: "Directo", equipaje: false },
-    { id: 4, destino: 'Barcelona', aerolinea: "ArJet", precio: 1050, duracion: "12:00", horarioIda: "22:00", tipo: "Directo", equipaje: true },
-    { id: 5, destino: 'Nueva York', aerolinea: "Aerolíneas Argentinas", precio: 1200, duracion: "11:00", horarioIda: "18:00", tipo: "Con escalas", equipaje: true },
-    { id: 6, destino: 'Londres', aerolinea: "Flybondi", precio: 1150, duracion: "14:00", horarioIda: "14:00", tipo: "Con escalas", equipaje: false },
-    { id: 7, destino: 'Miami', aerolinea: "Flybondi", precio: 750, duracion: "09:00", horarioIda: "10:00", tipo: "Con escalas", equipaje: false },
-    { id: 8, destino: 'Madrid', aerolinea: "ArJet", precio: 1150, duracion: "13:00", horarioIda: "08:00", tipo: "Directo", equipaje: true }
-];
+        { id: 1, destino: 'Miami', aerolinea: "ArJet", precio: 800, duracion: "08:40", horarioIda: "12:00", tipo: "Directo", equipaje: true },
+        { id: 2, destino: 'Roma', aerolinea: "Aerolíneas Argentinas", precio: 950, duracion: "15:30", horarioIda: "09:00", tipo: "Con escalas", equipaje: true },
+        { id: 3, destino: 'Madrid', aerolinea: "Flybondi", precio: 1100, duracion: "07:30", horarioIda: "06:00", tipo: "Directo", equipaje: false },
+        { id: 4, destino: 'Barcelona', aerolinea: "ArJet", precio: 1050, duracion: "12:00", horarioIda: "22:00", tipo: "Directo", equipaje: true },
+        { id: 5, destino: 'Nueva York', aerolinea: "Aerolíneas Argentinas", precio: 1200, duracion: "11:00", horarioIda: "18:00", tipo: "Con escalas", equipaje: true },
+        { id: 6, destino: 'Londres', aerolinea: "Flybondi", precio: 1150, duracion: "14:00", horarioIda: "14:00", tipo: "Con escalas", equipaje: false },
+        { id: 7, destino: 'Miami', aerolinea: "Flybondi", precio: 750, duracion: "09:00", horarioIda: "10:00", tipo: "Con escalas", equipaje: false },
+        { id: 8, destino: 'Madrid', aerolinea: "ArJet", precio: 1150, duracion: "13:00", horarioIda: "08:00", tipo: "Directo", equipaje: true }
+    ];
 
     filtroPrecio.addEventListener('input', (e) => {
         valorPrecioTexto.textContent = `Hasta $${e.target.value} USD`;
@@ -96,6 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
             contenedorVuelos.appendChild(tarjeta);
         });
+        
         document.querySelectorAll('.btn-seleccionar').forEach(boton => {
             boton.addEventListener('click', (evento) => {
                 evento.preventDefault();
@@ -104,8 +105,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 const idVueloElegido = evento.target.getAttribute('data-id');
                 const precioVueloElegido = parseFloat(evento.target.getAttribute('data-precio'));
                 
+                // Limpiamos datos viejos de otras compras por las dudas
+                localStorage.removeItem('asientosSeleccionados');
+                localStorage.removeItem('precioTotalFinal');
+
                 localStorage.setItem('vueloSeleccionadoId', idVueloElegido);
-                localStorage.setItem('precioTotalReserva', precioVueloElegido * parseInt(cantidadPasajerosInput.value));
+                localStorage.setItem('precioTotalReserva', precioVueloElegido * parseInt(cantidadPasajerosInput.value || 1));
                 window.location.href = 'DetalleVuelo.html';
             });
         });

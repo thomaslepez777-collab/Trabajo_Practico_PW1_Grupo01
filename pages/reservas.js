@@ -2,8 +2,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const contenedorReservas = document.getElementById('contenedor-reservas');
 
     function cargarReservas() {
-        const misReservas = JSON.parse(localStorage.getItem('historialReservas')) || [];
-        contenedorReservas.innerHTML = '';
+        const usuarioActivo = localStorage.getItem('arjet_usuario_activo');
+        
+        // Si no hay nadie logueado, no mostramos nada
+        if (!usuarioActivo) {
+            if(contenedorReservas) contenedorReservas.innerHTML = '<p class="mensaje-vacio">Iniciá sesión para ver tus reservas.</p>';
+            return;
+        }
+
+        let usuariosBD = JSON.parse(localStorage.getItem('arjet_usuarios')) || {};
+        
+        // Traemos únicamente las reservas de este usuario
+        const misReservas = usuariosBD[usuarioActivo].reservas || [];
+        
+        if(contenedorReservas) contenedorReservas.innerHTML = '';
 
         if (misReservas.length === 0) {
             contenedorReservas.innerHTML = '<p class="mensaje-vacio">No tenés reservas activas en este momento.</p>';
@@ -72,19 +84,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     cargarReservas();
 
-    contenedorReservas.addEventListener('click', (evento) => {
-        if (evento.target.classList.contains('btn-checkin')) {
-            const idReserva = evento.target.getAttribute('data-id');
-            const misReservas = JSON.parse(localStorage.getItem('historialReservas')) || [];
+    if(contenedorReservas) {
+        contenedorReservas.addEventListener('click', (evento) => {
+            if (evento.target.classList.contains('btn-checkin')) {
+                const idReserva = evento.target.getAttribute('data-id');
+                const usuarioActivo = localStorage.getItem('arjet_usuario_activo');
+                let usuariosBD = JSON.parse(localStorage.getItem('arjet_usuarios'));
 
-            const indice = misReservas.findIndex(r => r.idReserva === idReserva);
-            
-            if (indice !== -1) {
-                misReservas[indice].checkin = true;
-                localStorage.setItem('historialReservas', JSON.stringify(misReservas));
+                // Buscamos la reserva adentro de las reservas del usuario activo
+                const indice = usuariosBD[usuarioActivo].reservas.findIndex(r => r.idReserva === idReserva);
                 
-                cargarReservas();
+                if (indice !== -1) {
+                    // Actualizamos el estado del checkin
+                    usuariosBD[usuarioActivo].reservas[indice].checkin = true;
+                    // Guardamos la BD entera de vuelta
+                    localStorage.setItem('arjet_usuarios', JSON.stringify(usuariosBD));
+                    
+                    cargarReservas();
+                }
             }
-        }
-    });
+        });
+    }
 });
