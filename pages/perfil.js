@@ -7,15 +7,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const datosGuardados = JSON.parse(localStorage.getItem('datosUsuario')) || {};
 
-    // 1. Llenar los textos de la tarjeta de perfil
     document.getElementById('perfil-nombre').textContent = datosGuardados.nombre || '-';
     document.getElementById('perfil-nacionalidad').textContent = datosGuardados.nacionalidad || '-';
     document.getElementById('perfil-dni').textContent = datosGuardados.dni || '-';
     document.getElementById('perfil-telefono').textContent = datosGuardados.telefono || '-';
     document.getElementById('perfil-email').textContent = datosGuardados.email || '-';
     document.getElementById('perfil-usuario').textContent = datosGuardados.usuario || '-';
-    
-    // 2. Llenar los inputs del formulario
     document.getElementById('input-nombre').value = datosGuardados.nombre || '';
     document.getElementById('input-email').value = datosGuardados.email || '';
     document.getElementById('input-nacionalidad').value = datosGuardados.nacionalidad || '';

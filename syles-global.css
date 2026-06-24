@@ -1,9 +1,12 @@
 :root {
     --primario: #005c84;
     --secundario: #00a8e8;
-    --fondo: #f0f4f7;
+    --fondo: #f8f9fa;
     --texto: #1a3a4a;
     --blanco: #ffffff;
+    --rojo: #df0b0b;
+    --rojo-hover: #b50808;
+    --verde: #28a745;
 }
 
 html {
@@ -28,13 +31,153 @@ body {
     overflow-x: hidden;
 }
 
-.container {
-    max-width: 120rem;
-    margin: 0 auto;
-    width: 90%; 
+nav a {
+    text-decoration: none;
+    color: var(--primario);
+    margin-left: 2rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--secundario);
+}
+
+h1 {
+    color: var(--primario);
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    text-align: center;
 }
 
 img {
     max-width: 100%;
     height: auto;
+}
+
+.btn-volver {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--texto);
+    font-weight: 600;
+    font-size: 1.4rem;
+    padding: 0.8rem 1.6rem;
+    border: 0.1rem solid #ddd;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    background-color: transparent;
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+
+.btn-volver:hover {
+    background-color: #e9ecef;
+    border-color: #ccc;
+    color: var(--primario);
+}
+
+.contenedor-botones {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+    justify-content: center;
+    width: 100%;
+}
+
+.btn-atras, 
+.btn-continuar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 5.5rem;
+    padding: 0 4rem;
+    border-radius: 1rem;
+    font-weight: bold;
+    font-size: 1.8rem;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.btn-atras {
+    background: var(--rojo);
+    color: var(--blanco);
+}
+
+.btn-atras:hover {
+    background: var(--rojo-hover);
+    transform: translateY(-0.2rem);
+}
+
+.btn-continuar {
+    background: var(--primario);
+    color: var(--blanco);
+}
+
+.btn-continuar:hover {
+    background: var(--secundario);
+    transform: translateY(-0.2rem);
+}
+
+.resumen-vuelo {
+    background-color: var(--blanco);
+    border: 1px solid #eaeaea;
+    border-radius: 0.8rem;
+    padding: 2rem;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 0.4rem 1.5rem rgba(0, 0, 0, 0.05); 
+    width: 100%;
+    max-width: 55rem; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.resumen-vuelo h3 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #f0f0f0;
+    color: var(--texto);
+    font-size: 1.8rem;
+}
+
+.resumen-vuelo p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 1rem 0;
+    font-size: 1.5rem;
+    color: #555;
+}
+
+.resumen-vuelo p strong {
+    color: var(--texto);
+    font-weight: 600;
+}
+
+.total-resumen {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 2px dashed #ccc; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--texto);
+}
+
+.monto-total {
+    color: var(--primario); 
+    font-size: 2.2rem;
+}
+
+@media (max-width: 768px) {
+    .resumen-vuelo { padding: 1.5rem; }
+    .resumen-vuelo p { flex-direction: column; align-items: flex-start; gap: 0.3rem; }
+    .total-resumen { font-size: 1.6rem; }
+    .monto-total { font-size: 1.8rem; }
 }

@@ -18,10 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             let usuariosBD = JSON.parse(localStorage.getItem('arjet_usuarios')) || {};
 
-            // Validamos que exista y la pass sea correcta
             if (usuariosBD[nombreUsuario] && usuariosBD[nombreUsuario].password === password) {
-                
-                // Guardamos QUIÉN es el que inició sesión
+
                 localStorage.setItem('arjet_usuario_activo', nombreUsuario);
 
                 const destino = localStorage.getItem('redireccionPostLogin');

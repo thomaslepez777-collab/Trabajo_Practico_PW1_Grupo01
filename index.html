@@ -38,13 +38,32 @@
         <input type="radio" id="soloIda" name="tipoViaje" value="solo_ida">
         <label for="soloIda">Solo ida</label>
     </div>
-    <div class="inputs-busqueda">
-            <input type="text" id="origen" placeholder="Origen" required>
-            <input type="text" id="destino" placeholder="Destino" required>
-            <input type="date" id="fechaSalida" required title="Fecha de salida">
-            <input type="date" id="fechaRegreso" title="Fecha de regreso">
-                <select id="pasajeros" title="Pasajeros" class="Pasajeros">
-                    <option value="1">1 Pasajero</option>
+ 
+<div class="inputs-busqueda">
+    <select id="origen" required title="Origen del vuelo">
+        <option value="" disabled selected>Seleccione Origen</option>
+        <option value="buenos aires">Buenos Aires (EZE)</option>
+        <option value="cordoba">Córdoba (COR)</option>
+        <option value="mendoza">Mendoza (MDZ)</option>
+    </select>
+
+    <select id="destino" required title="Destino del vuelo">
+        <option value="" disabled selected>Seleccione Destino</option>
+        <option value="miami">Miami</option>
+        <option value="roma">Roma</option>
+        <option value="madrid">Madrid</option>
+        <option value="barcelona">Barcelona</option>
+        <option value="nueva york">Nueva York</option>
+        <option value="londres">Londres</option>
+        <option value="rio de janeiro">Río de Janeiro</option>
+        <option value="bariloche">Bariloche</option>
+    </select>
+
+    <input type="date" id="fechaSalida" required title="Fecha de salida">
+    <input type="date" id="fechaRegreso" title="Fecha de regreso">
+    
+    <select id="pasajeros" title="Pasajeros" class="Pasajeros">
+      <option value="1">1 Pasajero</option>
                     <option value="2">2 Pasajeros</option>
                     <option value="3">3 Pasajeros</option>
                     <option value="4">4 Pasajeros</option>
@@ -54,9 +73,9 @@
                     <option value="8">8 Pasajeros</option>
                     <option value="9">9 Pasajeros</option>
                     <option value="10">10 Pasajeros</option>
-                </select>
-            </div>
-    </div>
+        </select>
+</div>
+
     <button type="submit">Buscar Vuelos</button>
 </form>
         </section>

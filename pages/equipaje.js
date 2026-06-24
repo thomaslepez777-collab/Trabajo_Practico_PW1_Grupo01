@@ -1,17 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     const formEquipaje = document.querySelector('.formulario-equipaje');
-    const textoPrecioTotal = document.getElementById('precio-total-equipaje');
-
-    const precioBaseReserva = parseFloat(localStorage.getItem('precioTotalReserva')) || 0;
-    let precioFinal = precioBaseReserva;
 
     const preciosExtra = {
-        '9kg': 0,
-        '12kg': 20,
-        '20kg': 50,
-        'mano': 0,
-        'especial': 30,
-        'manoespecial': 40,
+        '9kg': 0, '12kg': 20, '20kg': 50,
+        'mano': 0, 'especial': 30, 'manoespecial': 40,
         'mascota': 60
     };
 
@@ -32,12 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (mascotaSeleccionada && mascotaSeleccionada.checked) {
             costoAdicional += preciosExtra['mascota'] || 0;
         }
-
-        precioFinal = precioBaseReserva + costoAdicional;
-
-        if (textoPrecioTotal) {
-            textoPrecioTotal.textContent = `$${precioFinal} USD`;
-        }
+        
+        localStorage.setItem('costoEquipaje', costoAdicional);
+        window.renderizarResumenVuelo('resumen-vuelo');
     }
 
     calcularTotal();
@@ -51,16 +40,11 @@ document.addEventListener('DOMContentLoaded', () => {
         formEquipaje.addEventListener('submit', (evento) => {
             evento.preventDefault();
             
-            localStorage.setItem('precioTotalFinal', precioFinal);
-            
-            // Verificamos con el nuevo sistema de multicuentas
             const usuarioActivo = localStorage.getItem('arjet_usuario_activo');
-
-            if (usuarioActivo) { // Si hay un nombre guardado, está logueado
+            if (usuarioActivo) {
                 window.location.href = 'Checkout.html';
             } else {
                 localStorage.setItem('redireccionPostLogin', 'Checkout.html');
-                localStorage.setItem('mostrarAvisoLogin', 'true');
                 window.location.href = 'Usuario.html';
             }
         });

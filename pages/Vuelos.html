@@ -8,6 +8,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="styles-vuelos.css">
     <link rel="stylesheet" href="../header-footer.css">
+    <link rel="stylesheet" href="../syles-global.css">
 </head>
 
 <body>
@@ -27,9 +28,37 @@
 </nav>
     </header>
     
-    <main>
+    <main class="container">
         <aside class="sidebar-filtros">
             <h2>Filtros</h2>
+
+  
+                 <details open>
+    <summary>Modificar Ruta</summary>
+    <div class="filtro-grupo-ruta">
+        <label for="modificar-origen">Origen:</label>
+        <select id="modificar-origen" class="select-ruta">
+            <option value="buenos aires">Buenos Aires (EZE)</option>
+            <option value="cordoba">Córdoba (COR)</option>
+            <option value="mendoza">Mendoza (MDZ)</option>
+        </select>
+    </div>
+    
+    <div class="filtro-grupo-ruta">
+        <label for="modificar-destino">Destino:</label>
+        <select id="modificar-destino" class="select-ruta">
+            <option value="todos">Todos los destinos</option>
+            <option value="miami">Miami</option>
+            <option value="roma">Roma</option>
+            <option value="madrid">Madrid</option>
+            <option value="barcelona">Barcelona</option>
+            <option value="nueva york">Nueva York</option>
+            <option value="londres">Londres</option>
+            <option value="rio de janeiro">Río de Janeiro</option>
+        </select>
+    </div>
+</details>
+
             
             <details open>
                 <summary>Pasajeros</summary>
@@ -48,7 +77,7 @@
             <details open>
                 <summary>Tipo de vuelo</summary>
                 <div class="filtro-grupo">
-                    <input type="checkbox" id="filtro-directo" value="Directo" checked>
+                    <input type="checkbox" id="filtro-directo" value="Directo">
                     <label for="filtro-directo">Directo</label>
                 </div>
                 <div class="filtro-grupo-fin">
@@ -60,15 +89,15 @@
             <details open>
                 <summary>Aerolínea</summary>
                 <div class="filtro-grupo">
-                    <input type="checkbox" id="aero-arjet" value="ArJet" checked>
+                    <input type="checkbox" id="aero-arjet" value="ArJet">
                     <label for="aero-arjet">ArJet</label>
                 </div>
                 <div class="filtro-grupo">
-                    <input type="checkbox" id="aero-aerolineas" value="Aerolíneas Argentinas" checked>
+                    <input type="checkbox" id="aero-aerolineas" value="Aerolíneas Argentinas">
                     <label for="aero-aerolineas">Aerolíneas Argentinas</label>
                 </div>
                 <div class="filtro-grupo-fin">
-                    <input type="checkbox" id="aero-flybondi" value="Flybondi" checked>
+                    <input type="checkbox" id="aero-flybondi" value="Flybondi">
                     <label for="aero-flybondi">Flybondi</label>
                 </div>
             </details>

@@ -28,12 +28,15 @@
 </header>
 
    <main>
-    <div style="width: 100%; max-width: 45rem; margin: 0 auto;">
-        <a href="Usuario.html" class="btn-volver">← Volver</a>
+    <div class="navegacion-arriba">
+        <a href="../index.html" class="btn-volver">← Volver</a>
+    </div>
+  <div class="encabezado-registro">
+       
         <h1>Registrarse</h1>
     </div>
 
-  <form id="form-registro" class="form-usuario">
+    <form id="form-registro" class="form-usuario">
     <div class="campo-grupo">
         <label class="label-usuario" for="nombre">Nombre Completo</label>
         <input type="text" id="nombre" class="input-usuario" required>
@@ -45,8 +48,39 @@
     </div>
 
     <div class="campo-grupo">
-        <label class="label-usuario" for="dni">DNI</label>
-        <input type="text" id="dni" class="input-usuario" required>
+        <label class="label-usuario" for="dni">Número de Documento (DNI)</label>
+        <input type="text" id="dni" class="input-usuario" pattern="\d{7,8}" title="Debe contener entre 7 y 8 números, sin puntos ni espacios" required>
+    </div>
+
+    <div class="campo-grupo">
+        <label class="label-usuario" for="telefono">Número de Teléfono</label>
+        <input type="tel" id="telefono" class="input-usuario" pattern="[0-9]{10,15}" title="Debe contener solo números, incluyendo el código de área" required>
+    </div>
+
+    <div class="campo-grupo">
+        <label class="label-usuario" for="email">Correo Electrónico</label>
+        <input type="email" id="email" class="input-usuario" required>
+    </div>
+
+    <div class="campo-grupo">
+        <label class="label-usuario" for="usuario">Nombre de Usuario</label>
+        <input type="text" id="usuario" class="input-usuario" required>
+    </div>
+
+   <div class="campo-grupo">
+        <label class="label-usuario" for="password">Contraseña <span style="color: red;">*</span></label>
+        
+        <div class="password-wrapper">
+            <input type="password" id="password" class="input-usuario" required>
+            <i class='bx bx-show' id="toggle-password"></i>
+        </div>
+
+        <ul class="requisitos-password">
+            <li id="req-largo" class="invalido"><i class='bx bx-x'></i> Mínimo 8 caracteres</li>
+            <li id="req-mayus" class="invalido"><i class='bx bx-x'></i> Al menos una mayúscula</li>
+            <li id="req-minus" class="invalido"><i class='bx bx-x'></i> Al menos una minúscula</li>
+            <li id="req-num" class="invalido"><i class='bx bx-x'></i> Al menos un número</li>
+        </ul>
     </div>
 
     <div class="botones-usuario">

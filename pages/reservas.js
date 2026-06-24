@@ -3,16 +3,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function cargarReservas() {
         const usuarioActivo = localStorage.getItem('arjet_usuario_activo');
-        
-        // Si no hay nadie logueado, no mostramos nada
+
         if (!usuarioActivo) {
             if(contenedorReservas) contenedorReservas.innerHTML = '<p class="mensaje-vacio">Iniciá sesión para ver tus reservas.</p>';
             return;
         }
 
         let usuariosBD = JSON.parse(localStorage.getItem('arjet_usuarios')) || {};
-        
-        // Traemos únicamente las reservas de este usuario
+
         const misReservas = usuariosBD[usuarioActivo].reservas || [];
         
         if(contenedorReservas) contenedorReservas.innerHTML = '';
@@ -59,23 +57,28 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             detalleReserva.innerHTML = `
-                <summary>
-                    <span> ${reserva.origen} ➔ ${reserva.destino}</span>
-                    <span>$${reserva.precioTotal} USD</span>
-                </summary>
-                <div class="contenido-reserva">
-                    <div class="resumen-flex">
-                        <div>
-                            <p><strong>Fecha Ida:</strong> ${reserva.fechaIda || 'A confirmar'}</p>
-                            <p><strong>Código:</strong> ${reserva.idReserva}</p>
-                        </div>
-                        <div class="resumen-derecha">
-                            <p><strong>Estado:</strong> <span class="${estadoClase}">${estadoTexto}</span></p>
-                        </div>
-                    </div>
-                    <hr class="separador-reserva">
-                    ${bloqueAccion}
-                </div>
+               <summary>
+        <span> ${reserva.origen} ➔ ${reserva.destino}</span>
+        <span>$${reserva.precioTotal} USD</span>
+    </summary>
+    <div class="contenido-reserva">
+        <div class="resumen-flex">
+            <div>
+                <p><strong>Fecha Ida:</strong> ${reserva.fechaIda || 'A confirmar'}</p>
+                <p><strong>Código:</strong> ${reserva.idReserva}</p>
+                <hr>
+                <p><strong>Pasajero:</strong> ${reserva.pasajeros.nombre}</p>
+                <p><strong>DNI:</strong> ${reserva.pasajeros.dni}</p>
+                <p><strong>Email:</strong> ${reserva.pasajeros.email}</p>
+                ${reserva.pasajeros.telefono ? `<p><strong>Teléfono:</strong> ${reserva.pasajeros.telefono}</p>` : ''}
+            </div>
+            <div class="resumen-derecha">
+                <p><strong>Estado:</strong> <span class="${estadoClase}">${estadoTexto}</span></p>
+            </div>
+        </div>
+        <hr class="separador-reserva">
+        ${bloqueAccion}
+    </div>
             `;
             
             contenedorReservas.appendChild(detalleReserva);
@@ -91,13 +94,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 const usuarioActivo = localStorage.getItem('arjet_usuario_activo');
                 let usuariosBD = JSON.parse(localStorage.getItem('arjet_usuarios'));
 
-                // Buscamos la reserva adentro de las reservas del usuario activo
+          
                 const indice = usuariosBD[usuarioActivo].reservas.findIndex(r => r.idReserva === idReserva);
                 
                 if (indice !== -1) {
-                    // Actualizamos el estado del checkin
                     usuariosBD[usuarioActivo].reservas[indice].checkin = true;
-                    // Guardamos la BD entera de vuelta
                     localStorage.setItem('arjet_usuarios', JSON.stringify(usuariosBD));
                     
                     cargarReservas();

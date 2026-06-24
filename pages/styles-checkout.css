@@ -1,29 +1,3 @@
-html {
-    font-size: 62.5%;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-body {
-    background-color: #f8f9fa;
-    font-size: 1.6rem;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-nav a {
-    text-decoration: none;
-    color: #005c84;
-    margin-left: 2rem;
-    font-weight: bold;
-}
-
 main {
     flex: 1;
     display: flex;
@@ -33,14 +7,8 @@ main {
     padding: 6rem 2rem;
 }
 
-h1 {
-    color: #005c84;
-    margin-bottom: 2rem;
-    font-size: 3rem;
-}
-
 form {
-    background: white;
+    background: var(--blanco);
     padding: 4rem;
     border-radius: 1.5rem;
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
@@ -48,12 +16,38 @@ form {
     max-width: 55rem;
 }
 
-form h3 {
-    color: #1a3a4a;
+form h3, form h4 {
+    color: var(--texto);
     margin-bottom: 2.5rem;
     font-size: 2rem;
     border-bottom: 0.2rem solid #e9ecef;
     padding-bottom: 1rem;
+}
+
+.datos-pasajero-visualizacion {
+    background: var(--fondo);
+    padding: 2.5rem;
+    border-radius: 1rem;
+    border-left: 0.4rem solid #188038;
+    margin-bottom: 3rem;
+}
+
+.dato-item { margin-bottom: 1.5rem; }
+.dato-item:last-child { margin-bottom: 0; }
+
+.dato-item .label {
+    font-weight: 700;
+    color: var(--texto);
+    display: block;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+}
+
+.dato-item p {
+    font-size: 1.6rem;
+    margin: 0.2rem 0 0 0;
+    color: #333;
 }
 
 .metodos-pago {
@@ -70,12 +64,12 @@ form h3 {
     height: 2rem;
     margin: 0;
     cursor: pointer;
-    accent-color: #005c84; 
+    accent-color: var(--primario); 
 }
 
 .opcion-pago {
     font-weight: bold;
-    color: #1a3a4a;
+    color: var(--texto);
     cursor: pointer;
     font-size: 1.6rem;
     user-select: none;
@@ -84,10 +78,10 @@ form h3 {
 .info-pago {
     display: none;
     grid-column: 1 / -1;
-    background: #f0f4f7;
+    background: var(--fondo);
     padding: 2.5rem;
     border-radius: 1rem;
-    border-left: 0.4rem solid #005c84;
+    border-left: 0.4rem solid var(--primario);
     margin-top: -0.5rem;
     margin-bottom: 1rem;
 }
@@ -115,13 +109,11 @@ form h3 {
 }
 
 .grid-form input:focus {
-    border-color: #005c84;
+    border-color: var(--primario);
     outline: none;
 }
 
-.full-width {
-    grid-column: span 2;
-}
+.full-width { grid-column: span 2; }
 
 .info-pago p {
     margin-bottom: 0.8rem;
@@ -129,151 +121,12 @@ form h3 {
     font-size: 1.5rem;
     line-height: 1.5;
 }
+.info-pago p:last-child { margin-bottom: 0; }
 
-.info-pago p:last-child {
-    margin-bottom: 0;
-}
-
-.contenedor-botones {
-    display: flex;
-    gap: 2rem;
-    margin-top: 1rem;
-    justify-content: center;
-    width: 100%;
-}
-
-.btn-atras, 
-.btn-continuar {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    height: 5.5rem;
-    padding: 0 4rem;
-    border-radius: 1rem;
-    font-weight: bold;
-    font-size: 1.6rem;
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s;
-    box-sizing: border-box;
-}
-
-.btn-atras {
-    background: #df0b0b;
-    color: white;
-}
-
-.btn-atras:hover {
-    background: #b50808;
-    transform: translateY(-0.2rem);
-}
-
-.btn-continuar {
-    background: #005c84;
-    color: white;
-}
-
-.btn-continuar:hover {
-    background: #00a8e8;
-    transform: translateY(-0.2rem);
-}
-
-/* === Resumen del vuelo === */
-.resumen-vuelo {
-    background: #e8f4f8;
-    border-left: 0.4rem solid #005c84;
-    border-radius: 1rem;
-    padding: 2rem 2.5rem;
-    margin-bottom: 3rem;
-}
-
-.resumen-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.6rem 0;
-    border-bottom: 0.1rem solid #cce4ef;
-    font-size: 1.5rem;
-    color: #495057;
-}
-
-.resumen-item:last-child {
-    border-bottom: none;
-}
-
-.resumen-label {
-    font-weight: bold;
-    color: #1a3a4a;
-}
-
-.resumen-total {
-    margin-top: 0.5rem;
-    font-size: 1.8rem;
-    font-weight: bold;
-}
-
-.resumen-total .resumen-label,
-.resumen-total span {
-    color: #005c84;
-}
-
-/* === Datos del pasajero === */
-.datos-pasajero {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-    margin-bottom: 3rem;
-}
-
-.campo-form {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-}
-
-.campo-form.campo-full {
-    grid-column: span 2;
-}
-
-.campo-form label {
-    font-weight: bold;
-    color: #1a3a4a;
-    font-size: 1.4rem;
-}
-
-.campo-form input {
-    padding: 1.2rem;
-    border: 0.1rem solid #ccc;
-    border-radius: 0.6rem;
-    font-size: 1.5rem;
-    transition: border-color 0.2s;
-}
-
-.campo-form input:focus {
-    border-color: #005c84;
-    outline: none;
-}
-
-/* === Mensajes de error === */
-.error-campo {
-    color: #dc3545;
-    font-size: 1.3rem;
-    min-height: 1.6rem;
-    display: block;
-}
-
-#error-pago {
-    display: block;
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-/* === Cupón de descuento === */
 .cupon-container {
     margin-bottom: 2rem;
     padding: 2rem 2.5rem;
-    background: #f0f4f7;
+    background: var(--fondo);
     border-radius: 1rem;
 }
 
@@ -299,14 +152,14 @@ form h3 {
 }
 
 .cupon-form input:focus {
-    border-color: #005c84;
+    border-color: var(--primario);
     outline: none;
 }
 
 .cupon-form button {
     padding: 1.2rem 2.4rem;
-    background: #005c84;
-    color: white;
+    background: var(--primario);
+    color: var(--blanco);
     border: none;
     border-radius: 0.6rem;
     font-size: 1.5rem;
@@ -315,9 +168,7 @@ form h3 {
     transition: background 0.2s;
 }
 
-.cupon-form button:hover {
-    background: #00a8e8;
-}
+.cupon-form button:hover { background: var(--secundario); }
 
 #mensaje-cupon {
     display: block;
@@ -327,10 +178,18 @@ form h3 {
     min-height: 1.8rem;
 }
 
-.mensaje-cupon-ok {
-    color: #28a745;
+.mensaje-cupon-ok { color: var(--verde, #28a745); }
+.mensaje-cupon-error { color: var(--rojo, #dc3545); }
+
+.error-campo {
+    color: var(--rojo, #dc3545);
+    font-size: 1.3rem;
+    min-height: 1.6rem;
+    display: block;
 }
 
-.mensaje-cupon-error {
-    color: #dc3545;
+#error-pago {
+    display: block;
+    text-align: center;
+    margin-bottom: 1rem;
 }

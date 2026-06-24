@@ -8,6 +8,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="styles-checkout.css">
     <link rel="stylesheet" href="../header-footer.css">
+    <link rel="stylesheet" href="../syles-global.css">
 </head>
 
 <body>
@@ -31,33 +32,30 @@
         <h1>Checkout</h1>
         <form id="form-checkout">
 
-            <h3>Resumen del vuelo</h3>
+            <h2>Resumen del vuelo</h2>
             <div id="resumen-vuelo" class="resumen-vuelo"></div>
 
             <h3>Datos del pasajero</h3>
-            <div class="datos-pasajero">
-                <div class="campo-form campo-full">
-                    <label for="nombre-pasajero">Nombre completo *</label>
-                    <input type="text" id="nombre-pasajero" placeholder="Nombre y apellido">
-                    <span class="error-campo" id="error-nombre"></span>
-                </div>
-                <div class="campo-form">
-                    <label for="dni-pasajero">Documento (DNI) *</label>
-                    <input type="text" id="dni-pasajero" placeholder="12345678" maxlength="8">
-                    <span class="error-campo" id="error-dni"></span>
-                </div>
-                <div class="campo-form">
-                    <label for="email-pasajero">Correo electrónico *</label>
-                    <input type="email" id="email-pasajero" placeholder="ejemplo@correo.com">
-                    <span class="error-campo" id="error-email"></span>
-                </div>
-                <div class="campo-form campo-full">
-                    <label for="tel-pasajero">Teléfono (opcional)</label>
-                    <input type="text" id="tel-pasajero" placeholder="+54 9 11 1234-5678">
-                </div>
-            </div>
+           <div class="datos-pasajero-visualizacion">
+    <div class="dato-item">
+        <span class="label">Nombre completo:</span>
+        <p id="resumen-nombre"></p>
+    </div>
+    <div class="dato-item">
+        <span class="label">DNI:</span>
+        <p id="resumen-dni"></p>
+    </div>
+    <div class="dato-item">
+        <span class="label">Correo electrónico:</span>
+        <p id="resumen-email"></p>
+    </div>
+    <div class="dato-item" id="bloque-telefono" style="display: none;">
+        <span class="label">Teléfono:</span>
+        <p id="resumen-telefono"></p>
+    </div>
+</div>
 
-            <h3>Seleccioná tu método de pago</h3>
+            <h4>Seleccioná tu método de pago</h4>
             <div class="metodos-pago">
                 <input type="radio" name="pago" id="radio-tarjeta">
                 <label for="radio-tarjeta" class="opcion-pago">Tarjeta de Crédito / Débito</label>
